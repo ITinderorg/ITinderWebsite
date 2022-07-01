@@ -112,7 +112,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-::selection {
+/*::selection {
   background: #ff589e;
   color: #fff;
 }
@@ -120,7 +120,7 @@ body {
 ::-moz-selection {
   background: #ff589e;
   color: #fff;
-}
+}*/
 
 .section {
   position: relative;
@@ -1516,8 +1516,9 @@ footer .social li {
 }
 
 footer .social li a {
-  color: #9d5bd9;
-   text-align: center;
+  color: #000000;
+  text-align: center;
+  padding-right: 3px;
   background-color: #fff;
   width: 36px;
   height: 36px;
@@ -1532,8 +1533,8 @@ footer .social li a {
 }
 
 footer .social li a:hover {
-  background-color: #ff589e;
-  color: #fff;
+  background-color: #FFFF00;
+  color: #0b8cfc;
 }
 
 footer .copyright {

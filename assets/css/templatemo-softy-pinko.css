@@ -911,6 +911,7 @@ parallax & home seperator
 }
 
 .mini .mini-content .mini-box {
+  height: 220px;
   display: block;
   background: #fff;
   padding: 20px;
@@ -926,6 +927,7 @@ parallax & home seperator
 }
 
 .mini .mini-content .mini-box-completed {
+  height: 220px;
   display: block;
   background: #90ee90;
   padding: 20px;

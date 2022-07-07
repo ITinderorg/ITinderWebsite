@@ -313,6 +313,33 @@
     </section>
     <!-- ***** Pricing Plans End ***** -->
 
+    <!-- ***** Counter Parallax Start ***** -->
+    <section class="counter">
+        <div class="content">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-lg-3 col-md-6 col-sm-12" >
+                        <div class="count-item">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-top">
+                            <strong id="candidates"></strong>
+                            <span>Кандидатів</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong id="recruiters"></strong>
+                            <span>Рекрутерів</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Counter Parallax End ***** -->
+
     <!-- ***** Blog Start ***** -->
     <section class="section" id="blog">
         <div class="container">
@@ -405,5 +432,21 @@
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        fetch("https://itinder-api.azurewebsites.net/itinder/getstat")
+            .then(response => {
+                // indicates whether the response is successful (status code 200-299) or not
+                if (!response.ok) {
+                    throw new Error(`Request failed with status ${reponse.status}`)
+                }
+                return response.json()
+            })
+            .then(data => {
+                document.getElementById("candidates").innerHTML = data.candidatesCount;
+                document.getElementById("recruiters").innerHTML = data.recruitersCount;
+            })
+            .catch(error => console.log(error))
+    </script>
   </body>
 </html>

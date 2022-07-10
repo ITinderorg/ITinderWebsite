@@ -1240,6 +1240,11 @@ pricing
   background-color: #04b4fc;
 }
 
+.center {
+  margin: 0 auto;
+  width: 80%;
+}
+
 .pricing-item.active .pricing-body .price-wrapper .currency {
   color: #fff;
 }

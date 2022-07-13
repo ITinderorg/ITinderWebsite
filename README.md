@@ -16,6 +16,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+## Folders structure
+
+Coming soon...
+
 ## Pages in Next.js
 
 In Next.js, a page is a React Component exported from a file in the pages directory.
@@ -24,3 +28,7 @@ Pages are associated with a route based on their file name. For example, in deve
 
 pages/index.js is associated with the / route.
 pages/posts/first-post.js is associated with the /posts/first-post route.
+
+## Naming convention
+
+Coming soon...

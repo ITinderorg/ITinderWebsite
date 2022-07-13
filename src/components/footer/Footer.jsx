@@ -1,18 +1,30 @@
-import classes from "./Footer.module.css";
+import "./Footer.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
+  const socials = [
+    {
+      id: 1,
+      href: "https://t.me/I_Tinder",
+      iconClass: "fa fa-paper-plane",
+    },
+  ];
+
   return (
     <footer>
       <Container>
-        <Row>
-          <Col lg={12} md={12} sm={12}>
+        <Row className="justify-content-center">
+          <Col sm={12} md={12} lg={12}>
             <ul className="social">
-              <li>
-                <a href="https://t.me/I_Tinder">
-                  <i className="fa fa-paper-plane"></i>
-                </a>
-              </li>
+              {socials.map((item) => {
+                return (
+                  <li key={item.id}>
+                    <a href={item.href}>
+                      <i className={item.iconClass}></i>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </Col>
         </Row>

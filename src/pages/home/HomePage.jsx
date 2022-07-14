@@ -3,10 +3,10 @@ import Footer from "../../components/footer/footer";
 import Blog from "./components/blog/Blog";
 import Counter from "./components/counter/Counter";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
   return (
     <>
-      <Counter />
+      <Counter stats={data.stats} />
       <Blog />
       <Footer />
     </>

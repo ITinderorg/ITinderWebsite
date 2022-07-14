@@ -1,6 +1,13 @@
-## ITinderwebsite
+# ITinderwebsite
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Table of contents
+
+- [Getting started](#getting-started)
+- [Folders structure](#folders-structure)
+- [Naming convention](#naming-convention)
+- [Technologies](#technologies)
 
 ## Getting Started
 
@@ -32,3 +39,9 @@ pages/posts/first-post.js is associated with the /posts/first-post route.
 ## Naming convention
 
 Coming soon...
+
+## Technologies
+
+- [React](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [React Bootstrap](https://react-bootstrap.github.io/)

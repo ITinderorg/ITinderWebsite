@@ -1,7 +1,25 @@
 import Head from "next/head";
 import HomePage from "./home/HomePage";
 
-export default function Home() {
+export async function getStaticProps() {
+  let response = await fetch(
+    "https://itinder-api.azurewebsites.net/itinder/getstat"
+  );
+  let data = await response.json();
+  return {
+    props: {
+      data: {
+        stats: {
+          candidates: data.candidatesCount,
+          recruiters: data.recruitersCount,
+        },
+      },
+    },
+    revalidate: 1000,
+  };
+}
+
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -17,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomePage />
+      <HomePage data={data} />
     </>
   );
 }

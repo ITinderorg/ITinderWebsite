@@ -3,10 +3,12 @@ import Footer from "../../components/footer/footer";
 import Blog from "./components/blog/Blog";
 import Counter from "./components/counter/Counter";
 import Pricing from "./components/pricing/Pricing";
+import Roadmap from "./components/roadmap/Roadmap";
 
 const HomePage = ({ data }) => {
   return (
     <>
+      <Roadmap />
       <Pricing />
       <Counter stats={data.stats} />
       <Blog />

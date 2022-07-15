@@ -43,13 +43,14 @@ const Pricing = () => {
           </Col>
         </Row>
 
-        <Row class="row">
+        <Row>
           {pricings.map((item) => {
             return (
               <Col
-                lg={4}
+                lg={3}
                 md={6}
                 sm={12}
+                key={item.title}
                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s"
               >
                 <div className="pricing-item">

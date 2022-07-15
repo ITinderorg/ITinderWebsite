@@ -67,7 +67,7 @@ const Roadmap = () => {
           <Row>
             {goals.map((item) => {
               return (
-                <Col lg={2} md={3} sm={6}>
+                <Col lg={2} md={3} sm={6} key={item.month}>
                   <a
                     href="#"
                     className={
@@ -76,7 +76,7 @@ const Roadmap = () => {
                   >
                     <strong>{item.month}</strong>
                     {item.points.map((point) => {
-                      return <span>{point}</span>;
+                      return <span key={point}>{point}</span>;
                     })}
                   </a>
                 </Col>

@@ -5,10 +5,12 @@ import Counter from "./components/counter/Counter";
 import Features from "./components/features/Features";
 import Pricing from "./components/pricing/Pricing";
 import Roadmap from "./components/roadmap/Roadmap";
+import WelcomeArea from "./components/welcome/WelcomeArea";
 
 const HomePage = ({ data }) => {
   return (
     <>
+      <WelcomeArea />
       <Features />
       <Roadmap />
       <Pricing />

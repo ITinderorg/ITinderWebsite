@@ -25,9 +25,38 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## Folders structure
 
-Coming soon...
+```
+├── public
+│   ├── favicon.ico
+├── src
+│   ├── assets
+│   │   │   ├── images
+│   │   │   └── styles
+│   │   │       └── fonts
+│   ├── constants
+│   │   └── Constants.js
+│   ├── components              <---- (Global components)
+│   │   ├── Footer
+│   │   │   ├── Footer.module.css
+│   │   │   └── Footer.jsx
+│   │   └── ...
+│   ├── pages                   <---- (All pages)
+│   │   ├── home                <---- (Folder for each page)
+│   │   │   ├── components      <---- (Components used ONLY by a specific page)
+│   │   │   │   ├── blog
+│   │   │   │   └── ...
+│   │   │   └── HomePage.jsx
+│   │   ├── ...
+│   │   ├── _app_.js
+│   │   └── index.js
+│   ├── utils                   <---- (Global utilities)
+│   │   └── index.js
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-## Pages in Next.js
+### Pages in Next.js
 
 In Next.js, a page is a React Component exported from a file in the pages directory.
 
@@ -39,7 +68,51 @@ pages/posts/first-post.js is associated with the /posts/first-post route.
 
 ## Naming convention
 
-Coming soon...
+### Folders, files
+
+- **Camel case** for **Folders**: components, footer, welcomeArea
+
+- **Pascal case** for **Files**: HomePage.jsx, Footer.jsx, WelcomeArea.jsx
+
+* **Css classes** for each **component**: {Component name}.module.css
+
+### Javascript
+
+#### Namespaces, Class names, Method names
+
+- PascalCase: Class.CreateItem()
+
+#### Public variables
+
+- PascalCase: Class.Child
+
+#### Private variables
+
+- \_lowercase_camelCase: this.\_db, \_childObjects
+
+#### Parameters, Local variables
+
+- lowercase_camelCase: orderId, userName
+
+### Git
+
+#### Setting up branches
+
+We will be using a branching strategy, where we will have one stable branch **main**, and 3 types of temporary branch types: **hotfix**, **feature** and **release**.
+
+**main** used to publish to live and rollbacks, and should therefore always be in a functional state.
+
+**feature** branches used for developing new features.
+
+_branched out from developer another feature branch, and merged into a release branch._
+
+**release** branches used to merge and prepare one or more completed features.
+
+_branched out from developer after closing the previous release, and merged back into both main andd evelop when the release is ready._
+
+**hotfix** branches used to fix minor issues on live before the next release date.
+
+_branched out from master, and merged back into both master and the next release._
 
 ## Technologies
 

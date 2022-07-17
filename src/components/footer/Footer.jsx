@@ -1,15 +1,9 @@
 import "./Footer.module.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Constants from "../../constants/Constants";
 
 const Footer = () => {
-  const socials = [
-    {
-      id: 1,
-      href: "https://t.me/I_Tinder",
-      iconClass: "fa fa-paper-plane",
-    },
-  ];
-
+  const socials = Constants.Socials;
   return (
     <footer>
       <Container>

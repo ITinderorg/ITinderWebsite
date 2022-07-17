@@ -1,30 +1,10 @@
 import "./Pricing.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
+import Constants from "../../../../constants/Constants";
 
 const Pricing = () => {
-  const pricings = [
-    {
-      title: "Трейні",
-      price: 1,
-      currency: "$",
-    },
-    {
-      title: "Джун",
-      price: 100,
-      currency: "$",
-    },
-    {
-      title: "Мідл",
-      price: 400,
-      currency: "$",
-    },
-    {
-      title: "Сіньйор",
-      price: 800,
-      currency: "$",
-    },
-  ];
+  const pricings = Constants.Pricings;
   return (
     <section className="section colored" id="pricing-plans">
       <Container>

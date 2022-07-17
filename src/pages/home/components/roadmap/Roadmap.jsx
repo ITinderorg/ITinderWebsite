@@ -1,53 +1,9 @@
 import "./Roadmap.module.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Constants from "../../../../constants/Constants";
 
 const Roadmap = () => {
-  const goals = [
-    {
-      month: "Травень",
-      points: ["1-th Зародилася ідея ITinder", "5-th Початок створення боту"],
-      complete: true,
-    },
-    {
-      month: "Червень",
-      points: ["10-th Тестування", "25-th Початок створення сайту"],
-      complete: true,
-    },
-    {
-      month: "Липень",
-      points: [
-        "- Закриття beta-версії",
-        "- Запуск в прод",
-        "- Баг-фіксинг",
-        "- Будуємо комьюніті",
-      ],
-      complete: false,
-    },
-    {
-      month: "Серпень",
-      points: [
-        "Додати : ",
-        "- Англійську мову",
-        "- Статистику",
-        "- Роширити стек",
-      ],
-      complete: false,
-    },
-    {
-      month: "Вересень",
-      points: [
-        "Додати преміум аккаунти в ITinder-bot",
-        "Створення веб-версії додатку",
-      ],
-      complete: false,
-    },
-    {
-      month: "Жовтень",
-      points: ["Розробка концепції Hire2Earn - наймай, щоб заробляти"],
-      complete: false,
-    },
-  ];
-
+  const goals = Constants.Goals;
   return (
     <section className="mini" id="work-process">
       <div className="mini-content">

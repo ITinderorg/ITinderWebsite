@@ -1,8 +1,14 @@
 import "./Pricing.module.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 
 const Pricing = () => {
   const pricings = [
+    {
+      title: "Трейні",
+      price: 1,
+      currency: "$",
+    },
     {
       title: "Джун",
       price: 100,
@@ -16,11 +22,6 @@ const Pricing = () => {
     {
       title: "Сіньйор",
       price: 800,
-      currency: "$",
-    },
-    {
-      title: "Трейні",
-      price: 1,
       currency: "$",
     },
   ];
@@ -46,24 +47,20 @@ const Pricing = () => {
         <Row>
           {pricings.map((item) => {
             return (
-              <Col
-                lg={3}
-                md={6}
-                sm={12}
-                key={item.title}
-                data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s"
-              >
-                <div className="pricing-item">
-                  <div className="pricing-header">
-                    <h3 className="pricing-title">{item.title}</h3>
-                  </div>
-                  <div className="pricing-body">
-                    <div className="price-wrapper">
-                      <span className="currency">{item.currency}</span>
-                      <span className="price">{item.price}</span>
+              <Col lg={3} md={6} sm={12} key={item.title}>
+                <Fade bottom>
+                  <div className="pricing-item">
+                    <div className="pricing-header">
+                      <h3 className="pricing-title">{item.title}</h3>
+                    </div>
+                    <div className="pricing-body">
+                      <div className="price-wrapper">
+                        <span className="currency">{item.currency}</span>
+                        <span className="price">{item.price}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Fade>
               </Col>
             );
           })}

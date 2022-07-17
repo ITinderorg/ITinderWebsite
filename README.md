@@ -36,7 +36,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 │   ├── constants
 │   │   └── Constants.js
 │   ├── components              <---- (Global components)
-│   │   ├── Footer
+│   │   ├── footer
 │   │   │   ├── Footer.module.css
 │   │   │   └── Footer.jsx
 │   │   ├── home                <---- (Folder for each page)

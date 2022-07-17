@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 import Blog from "./blog/Blog";
 import Counter from "./counter/Counter";
 import Features from "./features/Features";

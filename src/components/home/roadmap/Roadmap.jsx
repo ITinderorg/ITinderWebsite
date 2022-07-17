@@ -1,6 +1,6 @@
 import "./Roadmap.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Constants from "../../../../constants/Constants";
+import Constants from "../../../constants/Constants";
 
 const Roadmap = () => {
   const goals = Constants.Goals;
@@ -14,7 +14,7 @@ const Roadmap = () => {
                 <h1>Роадмап</h1>
                 <p>
                   Ми плануємо не зупинятися і розширювати функціонал. Створювати
-                  ком'юніті і разом рухатися в Web3
+                  ком&apos;юніті і разом рухатися в Web3
                 </p>
               </div>
             </Col>

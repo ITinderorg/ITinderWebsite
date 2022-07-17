@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomePage from "./home/HomePage";
+import HomePage from "../components/home/HomePage";
 
 export async function getStaticProps() {
   let response = await fetch(

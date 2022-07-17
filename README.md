@@ -39,14 +39,13 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 │   │   ├── Footer
 │   │   │   ├── Footer.module.css
 │   │   │   └── Footer.jsx
+│   │   ├── home                <---- (Folder for each page)
+│   │   │   ├── blog            <---- (Components used ONLY by a specific page)
+│   │   │   ├── counter
+│   │   │   ├── ...
+│   │   │   └── HomePage.jsx
 │   │   └── ...
 │   ├── pages                   <---- (All pages)
-│   │   ├── home                <---- (Folder for each page)
-│   │   │   ├── components      <---- (Components used ONLY by a specific page)
-│   │   │   │   ├── blog
-│   │   │   │   └── ...
-│   │   │   └── HomePage.jsx
-│   │   ├── ...
 │   │   ├── _app_.js
 │   │   └── index.js
 │   ├── utils                   <---- (Global utilities)

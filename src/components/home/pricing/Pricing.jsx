@@ -1,7 +1,7 @@
 import "./Pricing.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
-import Constants from "../../../../constants/Constants";
+import Constants from "../../../constants/Constants";
 
 const Pricing = () => {
   const pricings = Constants.Pricings;

@@ -1,12 +1,12 @@
 import "./Features.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import ITinder from "../../../../assets/images/ITinder-5.svg";
-import UAFlag from "../../../../assets/images/uaflag.png";
-import Liqpay from "../../../../assets/images/liqpay.png";
-import Bitcoin from "../../../../assets/images/bitcoin.png";
-import MainPageBot from "../../../../assets/images/mainpagebot.png";
-import Recruiter from "../../../../assets/images/recruiter.png";
-import Candidate from "../../../../assets/images/candidate.png";
+import ITinder from "../../../assets/images/ITinder-5.svg";
+import UAFlag from "../../../assets/images/uaflag.png";
+import Liqpay from "../../../assets/images/liqpay.png";
+import Bitcoin from "../../../assets/images/bitcoin.png";
+import MainPageBot from "../../../assets/images/mainpagebot.png";
+import Recruiter from "../../../assets/images/recruiter.png";
+import Candidate from "../../../assets/images/candidate.png";
 import Fade from "react-reveal/Fade";
 
 const Features = () => {

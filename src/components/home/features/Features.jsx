@@ -101,7 +101,7 @@ const Features = () => {
       </section>
 
       <section className="section padding-bottom-100">
-        <Container fluid="xl">
+        <Container>
           <Row>
             <Col
               lg={6}

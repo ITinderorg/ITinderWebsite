@@ -122,6 +122,10 @@ body {
   color: #fff;
 }*/
 
+.container {
+  max-width: 1140px !important;
+}
+
 .section {
   position: relative;
   padding-top: 100px;

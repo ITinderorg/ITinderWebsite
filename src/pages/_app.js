@@ -4,18 +4,39 @@ import "../assets/styles/flex-slider.css";
 import "../assets/styles/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
-import Spinner from "../components/spiner/Spinner";
 import config from "react-reveal/globals";
-import Fade from "react-reveal/Fade";
+import Loader from "../components/loader/Loader";
+import { useTransition, animated } from "react-spring";
 
 config({ ssrFadeout: true });
 
 function MyApp({ Component, pageProps }) {
+  const [isLoading, setIsLoading] = useState(true);
+  const transition = useTransition(isLoading, {
+    from: { opacity: 1 },
+    to: { opacity: 0 },
+    leave: { opacity: 0 },
+    config: {
+      duration: 500,
+    },
+  });
+  useEffect(() => {
+    setTimeout(function () {
+      setIsLoading(false);
+    }, 300);
+  });
   return (
     <>
-      <Fade ssrReveal>
-        <Component {...pageProps} />
-      </Fade>
+      {transition((style, item) =>
+        item ? (
+          <animated.div style={style} className="loaredWrapper">
+            <Loader />
+          </animated.div>
+        ) : (
+          ""
+        )
+      )}
+      <Component {...pageProps} />
     </>
   );
 }

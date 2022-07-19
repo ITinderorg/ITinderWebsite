@@ -1,6 +1,6 @@
-import classes from "./Spinner.module.css";
+import classes from "./Loader.module.css";
 
-const Spinner = () => {
+const Loader = () => {
   return (
     <div id="preloader">
       <div className="jumper">
@@ -12,4 +12,4 @@ const Spinner = () => {
   );
 };
 
-export default Spinner;
+export default Loader;

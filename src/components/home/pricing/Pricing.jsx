@@ -44,8 +44,6 @@ const Pricing = () => {
               </Col>
             );
           })}
-        </Row>
-        <Row>
           <Col lg={4} md={6} sm={12} className="center">
             <Fade bottom>
               <div className="pricing-item">

@@ -16,3 +16,18 @@ ul {
   justify-content: center;
   z-index: 99999;
 }
+.col-lg-2 {
+  padding: 0px 15px !important;
+}
+.col-md-2 {
+  padding: 0px 15px !important;
+}
+.col-lg-4 {
+  padding: 0px 15px !important;
+}
+.feature-image {
+  margin-bottom: 25px;
+}
+.copyright {
+  margin-bottom: 0px !important;
+}

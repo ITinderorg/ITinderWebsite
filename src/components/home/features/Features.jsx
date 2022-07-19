@@ -77,7 +77,12 @@ const Features = () => {
       >
         <Container>
           <Row>
-            <Col lg={5} md={12} sm={12} className="align-self-center">
+            <Col
+              lg={5}
+              md={12}
+              sm={12}
+              className="align-self-center feature-image"
+            >
               <Fade left duration={1700} distance="25px">
                 <img width="400" src={MainPageBot.src} alt="App" />
               </Fade>
@@ -143,7 +148,12 @@ const Features = () => {
       >
         <Container>
           <Row>
-            <Col lg={5} md={12} sm={12} className="align-self-center">
+            <Col
+              lg={5}
+              md={12}
+              sm={12}
+              className="align-self-center feature-image"
+            >
               <Fade left duration={1700} distance="25px">
                 <img width="400" src={Candidate.src} alt="App" />
               </Fade>

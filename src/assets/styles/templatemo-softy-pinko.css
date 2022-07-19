@@ -122,8 +122,10 @@ body {
   color: #fff;
 }*/
 
+@media all and (min-width: 1400px) {
 .container {
   max-width: 1140px !important;
+}
 }
 
 .section {

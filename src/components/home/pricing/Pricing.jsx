@@ -27,8 +27,8 @@ const Pricing = () => {
         <Row>
           {pricings.map((item) => {
             return (
-              <Col lg={4} md={6} sm={12} key={item.title}>
-                <Fade bottom>
+              <Col lg={4} md={6} sm={12} key={item.id}>
+                <Fade bottom duration={1200 + item.id * 400}>
                   <div className="pricing-item">
                     <div className="pricing-header">
                       <h3 className="pricing-title">{item.title}</h3>

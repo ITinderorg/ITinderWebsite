@@ -4,11 +4,8 @@ import "../assets/styles/flex-slider.css";
 import "../assets/styles/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
-import config from "react-reveal/globals";
 import Loader from "../components/loader/Loader";
 import { useTransition, animated } from "react-spring";
-
-config({ ssrFadeout: true });
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);

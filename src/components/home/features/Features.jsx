@@ -18,7 +18,7 @@ const Features = () => {
             <Col lg={12}>
               <Row>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom>
+                  <Fade bottom duration={1000}>
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
@@ -31,7 +31,7 @@ const Features = () => {
                   </Fade>
                 </Col>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom>
+                  <Fade bottom duration={1400}>
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
@@ -46,7 +46,7 @@ const Features = () => {
                   </Fade>
                 </Col>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom>
+                  <Fade bottom duration={1800}>
                     <div className="features-small-item">
                       <Row>
                         <div className="icon">
@@ -78,7 +78,7 @@ const Features = () => {
         <Container>
           <Row>
             <Col lg={5} md={12} sm={12} className="align-self-center">
-              <Fade left>
+              <Fade left duration={1700} distance="25px">
                 <img width="400" src={MainPageBot.src} alt="App" />
               </Fade>
             </Col>
@@ -129,7 +129,7 @@ const Features = () => {
               sm={12}
               className="align-self-center mobile-bottom-fix-big"
             >
-              <Fade right>
+              <Fade right duration={1700} distance="25px">
                 <img width="420" src={Recruiter.src} alt="App" />
               </Fade>
             </Col>
@@ -144,7 +144,7 @@ const Features = () => {
         <Container>
           <Row>
             <Col lg={5} md={12} sm={12} className="align-self-center">
-              <Fade left>
+              <Fade left duration={1700} distance="25px">
                 <img width="400" src={Candidate.src} alt="App" />
               </Fade>
             </Col>

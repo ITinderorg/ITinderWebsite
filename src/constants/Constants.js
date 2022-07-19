@@ -1,16 +1,19 @@
 const Constants = {
   Pricings: [
     {
+      id: 1,
       title: "Джун",
       price: 100,
       currency: "$",
     },
     {
+      id: 2,
       title: "Мідл",
       price: 400,
       currency: "$",
     },
     {
+      id: 3,
       title: "Сіньйор",
       price: 800,
       currency: "$",

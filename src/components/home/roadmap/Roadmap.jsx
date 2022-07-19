@@ -32,7 +32,11 @@ const Roadmap = () => {
                   >
                     <strong>{item.month}</strong>
                     {item.points.map((point) => {
-                      return <span key={point}>{point}</span>;
+                      return point == "<br />" ? (
+                        <br />
+                      ) : (
+                        <span key={point}>{point}</span>
+                      );
                     })}
                   </a>
                 </Col>

@@ -19,12 +19,16 @@ const Constants = {
   Goals: [
     {
       month: "Травень",
-      points: ["1-th Зародилася ідея ITinder", "5-th Початок створення боту"],
+      points: [
+        "1-th Зародилася ідея ITinder",
+        "<br />",
+        "5-th Початок створення боту",
+      ],
       complete: true,
     },
     {
       month: "Червень",
-      points: ["10-th Тестування", "25-th Початок створення сайту"],
+      points: ["10-th Тестування", "<br />", "25-th Початок створення сайту"],
       complete: true,
     },
     {
@@ -51,6 +55,7 @@ const Constants = {
       month: "Вересень",
       points: [
         "Додати преміум аккаунти в ITinder-bot",
+        "<br />",
         "Створення веб-версії додатку",
       ],
       complete: false,

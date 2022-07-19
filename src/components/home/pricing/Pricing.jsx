@@ -47,17 +47,19 @@ const Pricing = () => {
         </Row>
         <Row>
           <Col lg={4} md={6} sm={12} className="center">
-            <div className="pricing-item">
-              <div className="pricing-header">
-                <h3 className="pricing-title">Трейні</h3>
-              </div>
-              <div className="pricing-body">
-                <div className="price-wrapper">
-                  <span className="currency">$</span>
-                  <span className="price">1</span>
+            <Fade bottom>
+              <div className="pricing-item">
+                <div className="pricing-header">
+                  <h3 className="pricing-title">Трейні</h3>
+                </div>
+                <div className="pricing-body">
+                  <div className="price-wrapper">
+                    <span className="currency">$</span>
+                    <span className="price">1</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Fade>
           </Col>
         </Row>
       </Container>

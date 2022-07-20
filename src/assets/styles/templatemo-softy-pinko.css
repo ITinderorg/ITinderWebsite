@@ -650,7 +650,7 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/banner-bg-min.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
@@ -862,7 +862,7 @@ parallax & home seperator
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../images/design5.jpg);
+  background-image: url(../images/design5-min.jpg);
   z-index: 2;
   top: -20%;
   left: -20%;
@@ -1045,7 +1045,7 @@ parallax & home seperator
   width: 140%;
   height: 140%;
   opacity: .90;
-  background-image: url(../images/workprocess.jpg);
+  background-image: url(../images/workprocess-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

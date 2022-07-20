@@ -44,7 +44,8 @@ const Blog = () => {
                       src={item.imageSrc}
                       width="270"
                       height="360"
-                      alt=""
+                      alt="Blog"
+                      title="Blog"
                       loading="lazy"
                     />
                   </div>

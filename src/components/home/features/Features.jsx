@@ -26,7 +26,8 @@ const Features = () => {
                             width="100"
                             height="100"
                             src={ITinder.src}
-                            alt=""
+                            alt="telegram"
+                            title="telegram"
                             loading="lazy"
                           />
                         </i>
@@ -45,7 +46,8 @@ const Features = () => {
                             width="100"
                             height="100"
                             src={UAFlag.src}
-                            alt=""
+                            alt="UA"
+                            title="UA"
                             loading="lazy"
                           />
                         </i>
@@ -67,7 +69,8 @@ const Features = () => {
                               width="120"
                               height="27"
                               src={Liqpay.src}
-                              alt=""
+                              alt="Liqpay"
+                              title="Liqpay"
                               loading="lazy"
                             />
                           </i>
@@ -78,7 +81,8 @@ const Features = () => {
                               width="80"
                               height="80"
                               src={Bitcoin.src}
-                              alt=""
+                              alt="Bitcoin"
+                              title="Bitcoin"
                               loading="lazy"
                             />
                           </i>
@@ -113,6 +117,7 @@ const Features = () => {
                   height="464"
                   src={MainPageBot.src}
                   alt="App"
+                  title="App"
                   loading="lazy"
                 />
               </Fade>
@@ -170,6 +175,7 @@ const Features = () => {
                   height="487"
                   src={Recruiter.src}
                   alt="App"
+                  title="Recruiter"
                   loading="lazy"
                 />
               </Fade>
@@ -196,6 +202,7 @@ const Features = () => {
                   height="464"
                   src={Candidate.src}
                   alt="App"
+                  title="Candidate"
                   loading="lazy"
                 />
               </Fade>

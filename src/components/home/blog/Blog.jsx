@@ -40,7 +40,13 @@ const Blog = () => {
               <Col lg={4} md={6} sm={12} key={item.name}>
                 <div className="blog-post-thumb">
                   <div className="img">
-                    <img src={item.imageSrc} height="360" alt="" />
+                    <img
+                      src={item.imageSrc}
+                      width="270"
+                      height="360"
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
                   <div className="blog-content">
                     <h3>

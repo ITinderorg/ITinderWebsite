@@ -1,12 +1,12 @@
 import "./Features.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import ITinder from "../../../assets/images/ITinder-5.svg";
-import UAFlag from "../../../assets/images/uaflag.png";
-import Liqpay from "../../../assets/images/liqpay.png";
-import Bitcoin from "../../../assets/images/bitcoin.png";
-import MainPageBot from "../../../assets/images/mainpagebot.png";
-import Recruiter from "../../../assets/images/recruiter.png";
-import Candidate from "../../../assets/images/candidate.png";
+import ITinder from "../../../assets/images/ITinder-5.jpg";
+import UAFlag from "../../../assets/images/uaflag.jpg";
+import Liqpay from "../../../assets/images/liqpay.jpg";
+import Bitcoin from "../../../assets/images/bitcoin.jpg";
+import MainPageBot from "../../../assets/images/mainpagebot.jpg";
+import Recruiter from "../../../assets/images/recruiter.jpg";
+import Candidate from "../../../assets/images/candidate.jpg";
 import Fade from "react-reveal/Fade";
 
 const Features = () => {
@@ -22,7 +22,13 @@ const Features = () => {
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
-                          <img width="100" src={ITinder.src} alt="" />
+                          <img
+                            width="100"
+                            height="100"
+                            src={ITinder.src}
+                            alt=""
+                            loading="lazy"
+                          />
                         </i>
                       </div>
                       <h5 className="features-title">Швидкий найм</h5>
@@ -35,7 +41,13 @@ const Features = () => {
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
-                          <img width="100" src={UAFlag.src} alt="" />
+                          <img
+                            width="100"
+                            height="100"
+                            src={UAFlag.src}
+                            alt=""
+                            loading="lazy"
+                          />
                         </i>
                       </div>
                       <h5 className="features-title">
@@ -51,12 +63,24 @@ const Features = () => {
                       <Row>
                         <div className="icon">
                           <i>
-                            <img width="120" src={Liqpay.src} alt="" />
+                            <img
+                              width="120"
+                              height="27"
+                              src={Liqpay.src}
+                              alt=""
+                              loading="lazy"
+                            />
                           </i>
                         </div>
                         <div className="icon">
                           <i>
-                            <img width="80" src={Bitcoin.src} alt="" />
+                            <img
+                              width="80"
+                              height="80"
+                              src={Bitcoin.src}
+                              alt=""
+                              loading="lazy"
+                            />
                           </i>
                         </div>
                       </Row>
@@ -84,7 +108,13 @@ const Features = () => {
               className="align-self-center feature-image"
             >
               <Fade left duration={1700} distance="25px">
-                <img width="400" src={MainPageBot.src} alt="App" />
+                <img
+                  width="400"
+                  height="464"
+                  src={MainPageBot.src}
+                  alt="App"
+                  loading="lazy"
+                />
               </Fade>
             </Col>
             <Col lg={1}></Col>
@@ -135,7 +165,13 @@ const Features = () => {
               className="align-self-center mobile-bottom-fix-big"
             >
               <Fade right duration={1700} distance="25px">
-                <img width="420" src={Recruiter.src} alt="App" />
+                <img
+                  width="420"
+                  height="487"
+                  src={Recruiter.src}
+                  alt="App"
+                  loading="lazy"
+                />
               </Fade>
             </Col>
           </Row>
@@ -155,7 +191,13 @@ const Features = () => {
               className="align-self-center feature-image"
             >
               <Fade left duration={1700} distance="25px">
-                <img width="400" src={Candidate.src} alt="App" />
+                <img
+                  width="400"
+                  height="464"
+                  src={Candidate.src}
+                  alt="App"
+                  loading="lazy"
+                />
               </Fade>
             </Col>
             <Col lg={1}></Col>

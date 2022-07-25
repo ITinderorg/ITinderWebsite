@@ -7,37 +7,41 @@ const Counter = ({ stats }) => {
     <section className="counter">
       <div className="content">
         <Container>
-          <Row>
-            <Col lg={3} md={6} sm={12}></Col>
-            <Col lg={3} md={6} sm={12}>
-              <div className="count-item">
-                <CountUp
-                  start={0}
-                  end={stats.candidates}
-                  duration={1}
-                  enableScrollSpy
-                  scrollSpyDelay={1}
-                >
-                  {({ countUpRef }) => <strong ref={countUpRef} />}
-                </CountUp>
-                <span>Кандидатів</span>
-              </div>
-            </Col>
-            <Col lg={3} md={6} sm={12}>
-              <div className="count-item">
-                <CountUp
-                  start={0}
-                  end={stats.recruiters}
-                  duration={1}
-                  enableScrollSpy
-                  scrollSpyDelay={1}
-                >
-                  {({ countUpRef }) => <strong ref={countUpRef} />}
-                </CountUp>
-                <span>Рекрутерів</span>
-              </div>
-            </Col>
-          </Row>
+          {stats.candidates == 0 ? (
+            ""
+          ) : (
+            <Row>
+              <Col lg={3} md={6} sm={12}></Col>
+              <Col lg={3} md={6} sm={12}>
+                <div className="count-item">
+                  <CountUp
+                    start={0}
+                    end={stats.candidates}
+                    duration={1}
+                    enableScrollSpy
+                    scrollSpyDelay={1}
+                  >
+                    {({ countUpRef }) => <strong ref={countUpRef} />}
+                  </CountUp>
+                  <span>Кандидатів</span>
+                </div>
+              </Col>
+              <Col lg={3} md={6} sm={12}>
+                <div className="count-item">
+                  <CountUp
+                    start={0}
+                    end={stats.recruiters}
+                    duration={1}
+                    enableScrollSpy
+                    scrollSpyDelay={1}
+                  >
+                    {({ countUpRef }) => <strong ref={countUpRef} />}
+                  </CountUp>
+                  <span>Рекрутерів</span>
+                </div>
+              </Col>
+            </Row>
+          )}
         </Container>
       </div>
     </section>

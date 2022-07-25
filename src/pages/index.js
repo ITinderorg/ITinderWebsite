@@ -5,7 +5,12 @@ import Loader from "../components/loader/Loader";
 import { useTransition, animated } from "react-spring";
 
 export default function Home() {
-  const [data, setData] = useState();
+  const [data, setData] = useState({
+    stats: {
+      candidates: 0,
+      recruiters: 0,
+    },
+  });
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -57,7 +62,7 @@ export default function Home() {
 
       {transition((style, item) =>
         item ? (
-          <animated.div style={style} className="loaredWrapper">
+          <animated.div style={style} className="loaderWrapper">
             <Loader />
           </animated.div>
         ) : (
@@ -65,7 +70,7 @@ export default function Home() {
         )
       )}
 
-      {isLoading ? <></> : <HomePage data={data} />}
+      <HomePage data={data} />
     </>
   );
 }

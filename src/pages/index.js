@@ -1,25 +1,42 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import HomePage from "../components/home/HomePage";
+import Loader from "../components/loader/Loader";
+import { useTransition, animated } from "react-spring";
 
-export async function getStaticProps() {
-  let response = await fetch(
-    "https://itinder-api.azurewebsites.net/itinder/getstat"
-  );
-  let data = await response.json();
-  return {
-    props: {
-      data: {
-        stats: {
-          candidates: data.candidatesCount,
-          recruiters: data.recruitersCount,
-        },
-      },
+export default function Home() {
+  const [data, setData] = useState({
+    stats: {
+      candidates: 0,
+      recruiters: 0,
     },
-    revalidate: 1000,
-  };
-}
+  });
+  const [isLoading, setIsLoading] = useState(true);
+  const transition = useTransition(isLoading, {
+    from: { opacity: 1 },
+    to: { opacity: 0 },
+    leave: { opacity: 0 },
+    config: {
+      duration: 500,
+    },
+  });
 
-export default function Home({ data }) {
+  useEffect(() => {
+    fetch("https://itinder-api.azurewebsites.net/itinder/getstat")
+      .then((res) => res.json())
+      .then((data) => {
+        setData({
+          stats: {
+            candidates: data.candidatesCount,
+            recruiters: data.recruitersCount,
+          },
+        });
+        setTimeout(function () {
+          setIsLoading(false);
+        }, 300);
+      });
+  }, []);
+
   return (
     <>
       <Head>
@@ -42,6 +59,16 @@ export default function Home({ data }) {
           rel="stylesheet"
         />
       </Head>
+
+      {transition((style, item) =>
+        item ? (
+          <animated.div style={style} className="loaderWrapper">
+            <Loader />
+          </animated.div>
+        ) : (
+          ""
+        )
+      )}
 
       <HomePage data={data} />
     </>

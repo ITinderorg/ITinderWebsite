@@ -18,6 +18,13 @@ const Constants = {
       price: 800,
       currency: "$",
     },
+    {
+      id: 4,
+      title: "Трейні",
+      price: 1,
+      currency: "$",
+      class: "center",
+    },
   ],
   Goals: [
     {

@@ -1,0 +1,47 @@
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Logo from "../../assets/images/Logo.png";
+import Badge from "react-bootstrap/Badge";
+
+const Header = () => {
+  return (
+    <Navbar bg="dark" variant="dark" sticky="top">
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            alt=""
+            src={Logo.src}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{" "}
+          ITinder
+        </Navbar.Brand>
+
+        <Nav className="">
+          <Nav.Link href="/">
+            ITmentor{" "}
+            <Badge bg="warning" text="dark">
+              Скоро
+            </Badge>
+          </Nav.Link>
+          <Nav.Link href="/">
+            ITpartners{" "}
+            <Badge bg="warning" text="dark">
+              Скоро
+            </Badge>
+          </Nav.Link>
+          <Nav.Link href="/">
+            ITeach{" "}
+            <Badge bg="warning" text="dark">
+              Скоро
+            </Badge>
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Header;

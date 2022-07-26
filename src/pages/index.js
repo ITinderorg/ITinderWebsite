@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HomePage from "../components/home/HomePage";
 import Loader from "../components/loader/Loader";
 import { useTransition, animated } from "react-spring";
+import Header from "../components/header/Header";
 
 export default function Home() {
   const [data, setData] = useState({
@@ -70,6 +71,7 @@ export default function Home() {
         )
       )}
 
+      <Header />
       <HomePage data={data} />
     </>
   );

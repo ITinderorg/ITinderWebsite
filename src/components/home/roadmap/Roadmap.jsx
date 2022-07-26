@@ -33,7 +33,7 @@ const Roadmap = () => {
                     <strong>{item.month}</strong>
                     {item.points.map((point) => {
                       return point == "<br />" ? (
-                        <br />
+                        <br key={point} />
                       ) : (
                         <span key={point}>{point}</span>
                       );

@@ -6,7 +6,7 @@ import Badge from "react-bootstrap/Badge";
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" sticky="top">
+    <Navbar bg="dark" variant="dark" fixed="top">
       <Container>
         <Navbar.Brand href="/">
           <img

@@ -1,4 +1,4 @@
-import "./Footer.module.css";
+import classes from "./Footer.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Constants from "../../constants/Constants";
 
@@ -13,7 +13,7 @@ const Footer = () => {
               {socials.map((item) => {
                 return (
                   <li key={item.id}>
-                    <a href={item.href}>
+                    <a href={item.href} className={classes.socialLink}>
                       <i className={item.iconClass}></i>
                     </a>
                   </li>

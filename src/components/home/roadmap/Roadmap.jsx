@@ -25,7 +25,6 @@ const Roadmap = () => {
               return (
                 <Col lg={2} md={3} sm={6} xs={6} key={item.month}>
                   <a
-                    href="#"
                     className={
                       item.complete ? "mini-box-completed" : "mini-box"
                     }
@@ -33,7 +32,7 @@ const Roadmap = () => {
                     <strong>{item.month}</strong>
                     {item.points.map((point) => {
                       return point == "<br />" ? (
-                        <br />
+                        <br key={point} />
                       ) : (
                         <span key={point}>{point}</span>
                       );

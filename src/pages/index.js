@@ -32,9 +32,7 @@ export default function Home() {
             recruiters: data.recruitersCount,
           },
         });
-        setTimeout(function () {
-          setIsLoading(false);
-        }, 300);
+        setIsLoading(false);
       });
   }, []);
 

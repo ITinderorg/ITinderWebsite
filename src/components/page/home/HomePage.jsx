@@ -4,7 +4,7 @@ import Counter from "./counter/Counter";
 import Features from "./features/Features";
 import Pricing from "./pricing/Pricing";
 import Roadmap from "./roadmap/Roadmap";
-import WelcomeArea from "../welcome/WelcomeArea";
+import WelcomeArea from "../../global/welcome/WelcomeArea";
 import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => {

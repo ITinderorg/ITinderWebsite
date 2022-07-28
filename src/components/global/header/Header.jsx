@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "../../../assets/images/Logo.png";
 import Badge from "react-bootstrap/Badge";
 
 const Header = () => {

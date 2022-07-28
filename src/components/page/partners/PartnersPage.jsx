@@ -1,4 +1,4 @@
-import WelcomeArea from "../welcome/WelcomeArea";
+import WelcomeArea from "../../global/welcome/WelcomeArea";
 import AboutUs from "./aboutUs/AboutUs";
 import classes from "./PartnersPage.module.css";
 

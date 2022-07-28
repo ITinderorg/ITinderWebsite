@@ -1,7 +1,7 @@
 import "./Blog.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import KateImg from "../../../assets/images/kaaaaate.jpg";
-import AndryImg from "../../../assets/images/andyyy.jpg";
+import KateImg from "../../../../assets/images/kaaaaate.jpg";
+import AndryImg from "../../../../assets/images/andyyy.jpg";
 
 const Blog = () => {
   const people = [

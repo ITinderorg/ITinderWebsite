@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import HomePage from "../components/home/HomePage";
-import Loader from "../components/loader/Loader";
+import HomePage from "../components/page/home/HomePage";
+import Loader from "../components/global/loader/Loader";
 import { useTransition, animated } from "react-spring";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
+import Header from "../components/global/header/Header";
+import Footer from "../components/global/footer/Footer";
 
 export default function Home() {
   const [data, setData] = useState({

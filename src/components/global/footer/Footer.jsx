@@ -1,6 +1,6 @@
 import classes from "./Footer.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Constants from "../../constants/Constants";
+import Constants from "../../../constants/Constants";
 
 const Footer = () => {
   const socials = Constants.Socials;

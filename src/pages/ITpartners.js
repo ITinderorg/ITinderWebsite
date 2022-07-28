@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Header from "../components/header/Header";
-import Loader from "../components/loader/Loader";
-import Footer from "../components/footer/Footer";
+import Header from "../components/global/header/Header";
+import Loader from "../components/global/loader/Loader";
+import Footer from "../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import PartnersPage from "../components/partners/PartnersPage";
+import PartnersPage from "../components/page/partners/PartnersPage";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

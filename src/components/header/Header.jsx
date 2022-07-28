@@ -20,14 +20,9 @@ const Header = () => {
         </Navbar.Brand>
 
         <Nav className="">
+          <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
           <Nav.Link href="/">
             ITmentor{" "}
-            <Badge bg="warning" text="dark">
-              Скоро
-            </Badge>
-          </Nav.Link>
-          <Nav.Link href="/">
-            ITpartners{" "}
             <Badge bg="warning" text="dark">
               Скоро
             </Badge>

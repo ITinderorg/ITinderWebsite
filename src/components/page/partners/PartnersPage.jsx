@@ -20,8 +20,8 @@ const PartnersPage = () => {
       </WelcomeArea>
       <AboutUs />
       <Benefits />
-      <Pricing />
       <OurPartners />
+      <Pricing />
       <Action />
     </>
   );

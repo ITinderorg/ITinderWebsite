@@ -26,6 +26,36 @@ const PartnersConstants = {
       iconClass: "bi bi-arrow-bar-up fa-2x",
     },
   ],
+  Pricings: [
+    {
+      id: 1,
+      title: "Джун",
+      oldPrice: 100,
+      price: 85,
+      currency: "$",
+    },
+    {
+      id: 2,
+      title: "Мідл",
+      oldPrice: 400,
+      price: 340,
+      currency: "$",
+    },
+    {
+      id: 3,
+      title: "Сіньйор",
+      oldPrice: 800,
+      price: 680,
+      currency: "$",
+    },
+    {
+      id: 4,
+      title: "Трейні",
+      price: 1,
+      currency: "$",
+      class: "center",
+    },
+  ],
 };
 
 export default PartnersConstants;

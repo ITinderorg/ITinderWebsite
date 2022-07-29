@@ -2,6 +2,7 @@ import WelcomeArea from "../../global/welcome/WelcomeArea";
 import AboutUs from "./aboutUs/AboutUs";
 import Benefits from "./benefits/Benefits";
 import classes from "./PartnersPage.module.css";
+import Pricing from "./pricing/Pricing";
 
 const PartnersPage = () => {
   return (
@@ -17,6 +18,7 @@ const PartnersPage = () => {
       </WelcomeArea>
       <AboutUs />
       <Benefits />
+      <Pricing />
     </>
   );
 };

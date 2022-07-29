@@ -26,7 +26,12 @@ const Benefits = () => {
                   className={item.id % 2 == 0 ? "ms-auto text-end" : ""}
                 >
                   {item.id % 2 == 0 ? (
-                    <Fade right duration={1500} delay={item.id * 120}>
+                    <Fade
+                      right
+                      duration={1500}
+                      delay={item.id * 120}
+                      distance="125px"
+                    >
                       <div className="features-small-item">
                         <div className={classes.gridRight}>
                           <h5 className={classes.benefitTitle}>{item.text}</h5>
@@ -35,7 +40,12 @@ const Benefits = () => {
                       </div>
                     </Fade>
                   ) : (
-                    <Fade left duration={1500} delay={item.id * 120}>
+                    <Fade
+                      left
+                      duration={1500}
+                      delay={item.id * 120}
+                      distance="125px"
+                    >
                       <div className="features-small-item">
                         <div className={classes.gridLeft}>
                           <i className={item.iconClass}></i>

@@ -11,7 +11,7 @@ const Pricing = () => {
         <Row>
           <Col lg={12}>
             <div className="center-heading">
-              <h2 className="section-title">Прайс-лист для партнера</h2>
+              <h2 className="section-title">Прайс-лист для партнерів</h2>
             </div>
           </Col>
           <Col lg={6} className="offset-lg-3">

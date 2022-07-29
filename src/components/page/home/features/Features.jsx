@@ -18,7 +18,7 @@ const Features = () => {
             <Col lg={12}>
               <Row>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom duration={1000}>
+                  <Fade bottom duration={1200}>
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
@@ -38,7 +38,7 @@ const Features = () => {
                   </Fade>
                 </Col>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom duration={1400}>
+                  <Fade bottom duration={1200} delay={200}>
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
@@ -60,7 +60,7 @@ const Features = () => {
                   </Fade>
                 </Col>
                 <Col lg={4} md={6} sm={6}>
-                  <Fade bottom duration={1800}>
+                  <Fade bottom duration={1200} delay={400}>
                     <div className="features-small-item">
                       <Row>
                         <div className="icon">

@@ -56,6 +56,32 @@ const PartnersConstants = {
       class: "center",
     },
   ],
+  Partners: [
+    {
+      id: 1,
+      name: "Sample #1",
+      description: "Description sample",
+      imageName: "bitcoin.jpg",
+    },
+    {
+      id: 2,
+      name: "Sample #2",
+      description: "Description sample",
+      imageName: "bitcoin.jpg",
+    },
+    {
+      id: 3,
+      name: "Sample #3",
+      description: "Description sample",
+      imageName: "bitcoin.jpg",
+    },
+    {
+      id: 4,
+      name: "Sample #4",
+      description: "Description sample",
+      imageName: "bitcoin.jpg",
+    },
+  ],
 };
 
 export default PartnersConstants;

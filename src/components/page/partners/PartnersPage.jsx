@@ -1,5 +1,4 @@
 import WelcomeArea from "../../global/welcome/WelcomeArea";
-import AboutUs from "./aboutUs/AboutUs";
 import Action from "./action/Action";
 import Benefits from "./benefits/Benefits";
 import OurPartners from "./ourPartners/OurPartners";
@@ -18,7 +17,6 @@ const PartnersPage = () => {
           <strong>тисячі IT спеціалістів</strong> чекають на ваші пропозиції
         </p>
       </WelcomeArea>
-      <AboutUs />
       <Benefits />
       <OurPartners />
       <Pricing />

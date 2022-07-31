@@ -7,7 +7,7 @@ const OurPartners = () => {
   return (
     <section className="mini" id="ourPartners">
       <div className="mini-content">
-        <Container>
+        <Container className="padding-top-20">
           <Row>
             <Col lg={12}>
               <div className="center-heading info">

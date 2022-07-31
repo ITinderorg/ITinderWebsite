@@ -2,28 +2,33 @@ const PartnersConstants = {
   Benefits: [
     {
       id: 1,
+      title: "Знижки на кандидатів",
       text: "Знижка на кандидатів всіх рівнів 15% (окрім рівня Trainee)",
-      iconClass: "bi bi-cash-coin fa-2x",
+      imageSrc: "Discount.png",
     },
     {
       id: 2,
+      title: "Більше можливостей",
       text: "Збільшення кількості доданих вакансій (4 → 10)",
-      iconClass: "bi bi-graph-up fa-2x",
+      imageSrc: "Rocket.png",
     },
     {
       id: 3,
+      title: "Персональні знижки",
       text: "Знижки на майбутні продукти ITinder",
-      iconClass: "bi bi-piggy-bank fa-2x",
+      imageSrc: "Personal.png",
     },
     {
       id: 4,
-      text: "Підтримка 24/7: вас буде додано до чату команди, де ви зможете задавати свої питання",
-      iconClass: "bi bi-calendar3 fa-2x",
+      title: "Підтримка 24/7",
+      text: "Вас буде додано до чату команди, де ви зможете задавати свої питання",
+      imageSrc: "Support.png",
     },
     {
       id: 5,
+      title: "Постійні оновлення",
       text: "Ваші побажання та пропозиції → випуск апдейтів",
-      iconClass: "bi bi-arrow-bar-up fa-2x",
+      imageSrc: "Delivery.png",
     },
   ],
   Pricings: [

@@ -19,7 +19,7 @@ const Header = () => {
           ITinder
         </Navbar.Brand>
 
-        <Nav className="">
+        <Nav className="align-items-center">
           <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
           <Nav.Link href="/">
             ITmentor{" "}

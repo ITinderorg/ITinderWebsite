@@ -16,6 +16,12 @@ const PartnersPage = () => {
           Запрошуємо <strong>бізнес</strong> до партнерства —{" "}
           <strong>тисячі IT спеціалістів</strong> чекають на ваші пропозиції
         </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSex4KW7w_SFMk9D0E9XDrgxuIaMhTSlmBOSzYAQHVG3uHtKGg/viewform"
+          className="main-button-slider"
+        >
+          Запартнеритись
+        </a>
       </WelcomeArea>
       <Benefits />
       <OurPartners />

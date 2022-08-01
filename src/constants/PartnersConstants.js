@@ -10,7 +10,7 @@ const PartnersConstants = {
       id: 2,
       title: "Більше можливостей",
       text: "Збільшення кількості доданих вакансій (4 → 10)",
-      imageSrc: "Rocket.png",
+      imageSrc: "Increase.png",
     },
     {
       id: 3,

@@ -1,5 +1,5 @@
 .btn {
-  padding: 15px 100px;
+  padding: 10px 60px;
   margin: 10px 4px;
   text-transform: uppercase;
   text-align: center;
@@ -27,7 +27,7 @@
 }
 
 .btn:hover {
-  border: 2px solid #071982;
+  border: 2px solid #0b8cfc;
   color: #80ffd3 !important;
 }
 .btn::before {
@@ -35,7 +35,7 @@
   width: 0%;
   height: 100%;
   display: block;
-  background: #071982;
+  background: #0b8cfc;
   position: absolute;
   -ms-transform: skewX(-20deg);
   -webkit-transform: skewX(-20deg);
@@ -56,7 +56,7 @@
   width: 0%;
   height: 100%;
   display: block;
-  background: #80ffd3;
+  background: #90ee90;
   position: absolute;
   -ms-transform: skewX(-20deg);
   -webkit-transform: skewX(-20deg);

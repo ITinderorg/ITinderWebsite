@@ -9,13 +9,6 @@ const Benefits = () => {
   return (
     <section className="section" id="benefits">
       <Container>
-        <Row>
-          <Col lg={12}>
-            <div className="center-heading">
-              <h2 className="section-title">Наші переваги</h2>
-            </div>
-          </Col>
-        </Row>
         {benefits.map((item) => {
           return (
             <Row

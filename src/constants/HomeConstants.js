@@ -49,7 +49,7 @@ const HomeConstants = {
         "- Баг-фіксинг",
         "- Будуємо комьюніті",
       ],
-      complete: false,
+      complete: true,
     },
     {
       month: "Серпень",

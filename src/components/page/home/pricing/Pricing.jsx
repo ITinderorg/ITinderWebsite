@@ -1,10 +1,9 @@
 import "./Pricing.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
-import Constants from "../../../constants/Constants";
+import Constants from "../../../../constants/HomeConstants";
 
 const Pricing = () => {
-  // TODO: Replace candidates 0 check (only used in first load to prevent countUp from stacking on 0)
   const pricings = Constants.Pricings;
   return (
     <section className="section colored" id="pricing-plans">

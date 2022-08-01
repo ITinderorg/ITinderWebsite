@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CountUp from "react-countup";
 
 const Counter = ({ stats }) => {
+  // TODO: Replace candidates 0 check (only used in first load to prevent countUp from stacking on 0)
   return (
     <section className="counter">
       <div className="content">

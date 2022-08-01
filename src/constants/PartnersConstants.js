@@ -26,9 +26,9 @@ const PartnersConstants = {
     },
     {
       id: 5,
-      title: "Постійні оновлення",
-      text: "Ваші побажання та пропозиції → випуск апдейтів",
-      imageSrc: "Delivery.png",
+      title: "Вакансії із зірочкою",
+      text: "Ваші вакансії будуть відмічені зірочкою",
+      imageSrc: "Star.png",
     },
   ],
   Pricings: [

@@ -4,10 +4,10 @@ import constants from "../../../../constants/PartnersConstants";
 
 const OurPartners = () => {
   const partners = constants.Partners;
-  return (
+  /*return (
     <section className="mini" id="ourPartners">
       <div className="mini-content">
-        <Container className="padding-top-20">
+        <Container className="padding-top-40">
           <Row>
             <Col lg={12}>
               <div className="center-heading info">
@@ -41,6 +41,39 @@ const OurPartners = () => {
                 </Col>
               );
             })}
+          </Row>
+        </Container>
+      </div>
+    </section>
+  );*/
+  return (
+    <section className="mini" id="ourPartners">
+      <div className="mini-content">
+        <Container className="padding-top-40">
+          <Row>
+            <Col lg={12}>
+              <div className="center-heading info">
+                <h2>Наші партнери</h2>
+              </div>
+            </Col>
+          </Row>
+          <Row className="padding-top-70">
+            <Col lg={12}>
+              <div className="center-heading info text-center">
+                <h2 className={classes.words}>
+                  <span className={classes.jump + " " + classes.one}>C</span>
+                  <span className={classes.jump + " " + classes.two}>o</span>
+                  <span className={classes.jump + " " + classes.three}>m</span>
+                  <span className={classes.jump + " " + classes.four}>i</span>
+                  <span className={classes.jump + " " + classes.five}>n</span>
+                  <span className={classes.jump + " " + classes.six}>g</span>
+                  <span className={classes.jump + " " + classes.seven}>s</span>
+                  <span className={classes.jump + " " + classes.eight}>o</span>
+                  <span className={classes.jump + " " + classes.nine}>o</span>
+                  <span className={classes.jump + " " + classes.ten}>n</span>
+                </h2>
+              </div>
+            </Col>
           </Row>
         </Container>
       </div>

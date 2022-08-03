@@ -10,8 +10,9 @@ const PartnersPage = () => {
     <>
       <WelcomeArea>
         <h1>
-          <strong>ITpartners</strong> — <strong>тисячі IT спеціалістів</strong>{" "}
-          чекають на ваші пропозиції
+          <strong>ITpartners</strong>
+          <br />
+          тисячі IT спеціалістів чекають на ваші пропозиції
         </h1>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSex4KW7w_SFMk9D0E9XDrgxuIaMhTSlmBOSzYAQHVG3uHtKGg/viewform"

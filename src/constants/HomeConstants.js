@@ -1,4 +1,4 @@
-const Constants = {
+const HomeConstants = {
   Pricings: [
     {
       id: 1,
@@ -49,7 +49,7 @@ const Constants = {
         "- Баг-фіксинг",
         "- Будуємо комьюніті",
       ],
-      complete: false,
+      complete: true,
     },
     {
       month: "Серпень",
@@ -76,23 +76,6 @@ const Constants = {
       complete: false,
     },
   ],
-  Socials: [
-    {
-      id: 1,
-      href: "https://t.me/I_Tinder",
-      iconClass: "fa fa-paper-plane",
-    },
-    {
-      id: 2,
-      href: "https://www.linkedin.com/company/itinder/",
-      iconClass: "fa fa-linkedin",
-    },
-    {
-      id: 3,
-      href: "https://www.instagram.com/itinder_ua/",
-      iconClass: "fa fa-instagram",
-    },
-  ],
 };
 
-export default Constants;
+export default HomeConstants;

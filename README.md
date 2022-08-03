@@ -1,4 +1,4 @@
-# ITinderwebsite 
+# ITinderwebsite
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -35,16 +35,19 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 │   │   │       └── fonts
 │   ├── constants
 │   │   └── Constants.js
-│   ├── components              <---- (Global components)
-│   │   ├── footer
-│   │   │   ├── Footer.module.css
-│   │   │   └── Footer.jsx
-│   │   ├── home                <---- (Folder for each page)
-│   │   │   ├── blog            <---- (Components used ONLY by a specific page)
-│   │   │   ├── counter
-│   │   │   ├── ...
-│   │   │   └── HomePage.jsx
-│   │   └── ...
+│   ├── components
+│   │   ├── global              <---- (Global components)
+│   │   │   ├── footer
+│   │   │   │   ├── Footer.module.css
+│   │   │   │   └── Footer.jsx
+│   │   │   └── ...
+│   │   └── page                <---- (Page components)
+│   │   │   ├── home            <---- (Folder for each page)
+│   │   │   │   ├── blog        <---- (Components used ONLY by a specific page)
+│   │   │   │   ├── counter
+│   │   │   │   ├── ...
+│   │   │   │   └── HomePage.jsx
+│   │   │   └── ...
 │   ├── pages                   <---- (All pages)
 │   │   ├── _app_.js
 │   │   └── index.js
@@ -120,3 +123,4 @@ _branched out from master, and merged back into both master and the next release
 - [React Bootstrap](https://react-bootstrap.github.io/)
 - [React Countup](https://github.com/glennreyes/react-countup)
 - [React Reveal](https://www.react-reveal.com/)
+- [React Spring](https://react-spring.dev/)

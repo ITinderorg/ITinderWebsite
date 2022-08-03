@@ -1,0 +1,74 @@
+.words {
+  color: yellow;
+}
+
+.jump {
+  animation-name: bounce;
+  animation-duration: 3s;
+  backface-visibility: visible !important;
+  animation-fill-mode: both;
+  animation-timing-dunction: linear;
+  animation-iteration-count: infinite;
+}
+
+.one {
+  animation-delay: 0ms;
+}
+
+.two {
+  animation-delay: 110ms;
+}
+
+.three {
+  animation-delay: 220ms;
+}
+
+.four {
+  animation-delay: 330ms;
+}
+
+.five {
+  animation-delay: 440ms;
+}
+
+.six {
+  animation-delay: 550ms;
+}
+
+.seven {
+  animation-delay: 660ms;
+  margin-left: 20px;
+}
+
+.eight {
+  animation-delay: 770ms;
+}
+
+.nine {
+  animation-delay: 880ms;
+}
+
+.ten {
+  animation-delay: 980ms;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  60% {
+    transform: translate(0, 0);
+    color: yellow;
+  }
+
+  75% {
+    transform: translate(0, -15px) skew(-13deg);
+    color: #0b8cfc;
+  }
+
+  90%,
+  100% {
+    transform: translate(0, 0px);
+  }
+}

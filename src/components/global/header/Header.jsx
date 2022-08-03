@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "../../../assets/images/Logo.png";
 import Badge from "react-bootstrap/Badge";
 
 const Header = () => {
@@ -19,15 +19,10 @@ const Header = () => {
           ITinder
         </Navbar.Brand>
 
-        <Nav className="">
+        <Nav className="align-items-center">
+          <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
           <Nav.Link href="/">
             ITmentor{" "}
-            <Badge bg="warning" text="dark">
-              Скоро
-            </Badge>
-          </Nav.Link>
-          <Nav.Link href="/">
-            ITpartners{" "}
             <Badge bg="warning" text="dark">
               Скоро
             </Badge>

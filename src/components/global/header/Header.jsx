@@ -21,12 +21,7 @@ const Header = () => {
 
         <Nav className="align-items-center">
           <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
-          <Nav.Link href="/">
-            ITmentor{" "}
-            <Badge bg="warning" text="dark">
-              Скоро
-            </Badge>
-          </Nav.Link>
+          <Nav.Link href="/ITmentor">ITmentor</Nav.Link>
           <Nav.Link href="/">
             ITeach{" "}
             <Badge bg="warning" text="dark">

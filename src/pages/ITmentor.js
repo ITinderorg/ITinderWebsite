@@ -4,7 +4,7 @@ import Loader from "../components/global/loader/Loader";
 import Footer from "../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import PartnersPage from "../components/page/partners/PartnersPage";
+import MentorPage from "../components/page/mentor/MentorPage";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,19 +26,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ITpartner</title>
+        <title>ITmentor</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="author" content="" />
-        <meta
-          name="description"
-          content="ITpartners - Запрошуємо бізнес до партнерства — тисячі IT спеціалістів чекають на ваші пропозиції🙌"
-        />
+        <meta name="description" content="ITmentor -" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="/ITpartners" />
+        <link rel="canonical" href="/ITmentor" />
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
           rel="stylesheet"
@@ -60,7 +57,7 @@ export default function Home() {
       )}
 
       <Header />
-      <PartnersPage />
+      <MentorPage />
       <Footer />
     </>
   );

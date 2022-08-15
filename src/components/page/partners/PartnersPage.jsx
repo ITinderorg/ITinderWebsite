@@ -14,10 +14,7 @@ const PartnersPage = () => {
           <br />
           тисячі IT спеціалістів чекають на ваші пропозиції
         </h1>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSex4KW7w_SFMk9D0E9XDrgxuIaMhTSlmBOSzYAQHVG3uHtKGg/viewform"
-          className="main-button-slider"
-        >
+        <a href="https://t.me/katrine_ryabova" className="main-button-slider">
           Запартнеритись
         </a>
       </WelcomeArea>

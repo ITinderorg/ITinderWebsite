@@ -37,3 +37,9 @@ ul {
 .nav-link {
   margin: 0 2px;
 }
+
+@media (max-width: 768px) {
+  .text-sm-center {
+    justify-content: center !important;
+  }
+}

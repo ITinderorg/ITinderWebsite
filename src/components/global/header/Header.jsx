@@ -102,12 +102,7 @@ const Header = () => {
           </Nav.Link>
           <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
           <Navbar.Collapse>
-            <Nav.Link href="/">
-              ITmentor{" "}
-              <Badge bg="warning" text="dark">
-                Скоро
-              </Badge>
-            </Nav.Link>
+            <Nav.Link href="/ITmentor">ITmentor</Nav.Link>
             <Nav.Link href="/">
               ITeach{" "}
               <Badge bg="warning" text="dark">

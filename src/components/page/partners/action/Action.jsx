@@ -8,10 +8,7 @@ const Action = () => {
         <Row>
           <Col lg={12}>
             <div className="center-heading">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSex4KW7w_SFMk9D0E9XDrgxuIaMhTSlmBOSzYAQHVG3uHtKGg/viewform"
-                className={classes.btn}
-              >
+              <a href="https://t.me/katrine_ryabova" className={classes.btn}>
                 <span>Запартнеритись</span>
                 <div className={classes.transition}></div>
               </a>

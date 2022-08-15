@@ -31,3 +31,9 @@ ul {
 .copyright {
   margin-bottom: 0px !important;
 }
+.navbar-nav {
+  flex-direction: row !important;
+}
+.nav-link {
+  margin: 0 2px;
+}

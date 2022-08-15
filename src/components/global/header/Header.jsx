@@ -7,7 +7,7 @@ import Badge from "react-bootstrap/Badge";
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" fixed="top">
+    <Navbar bg="dark" variant="dark" fixed="top" expand="sm">
       <Container>
         <Navbar.Brand href="/">
           <img
@@ -21,10 +21,10 @@ const Header = () => {
         </Navbar.Brand>
 
         <Nav className="align-items-center">
-          <Nav.Link href="https://savelife.in.ua/">
+          <Nav.Link href="https://savelife.in.ua/donate/">
             <svg
-              width="100"
-              height="30"
+              width="110"
+              height="40"
               viewBox="0 0 172 68"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -101,18 +101,20 @@ const Header = () => {
             </svg>
           </Nav.Link>
           <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
-          <Nav.Link href="/">
-            ITmentor{" "}
-            <Badge bg="warning" text="dark">
-              Скоро
-            </Badge>
-          </Nav.Link>
-          <Nav.Link href="/">
-            ITeach{" "}
-            <Badge bg="warning" text="dark">
-              Скоро
-            </Badge>
-          </Nav.Link>
+          <Navbar.Collapse>
+            <Nav.Link href="/">
+              ITmentor{" "}
+              <Badge bg="warning" text="dark">
+                Скоро
+              </Badge>
+            </Nav.Link>
+            <Nav.Link href="/">
+              ITeach{" "}
+              <Badge bg="warning" text="dark">
+                Скоро
+              </Badge>
+            </Nav.Link>
+          </Navbar.Collapse>
         </Nav>
       </Container>
     </Navbar>

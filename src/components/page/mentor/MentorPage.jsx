@@ -1,6 +1,7 @@
 import classes from "./MentorPage.module.css";
 import WelcomeArea from "../../global/welcome/WelcomeArea";
 import Description from "./description/Description";
+import WhyMentor from "./whyMentor/WhyMentor";
 
 const MentorPage = () => {
   return (
@@ -11,6 +12,7 @@ const MentorPage = () => {
         </h1>
       </WelcomeArea>
       <Description />
+      <WhyMentor />
     </>
   );
 };

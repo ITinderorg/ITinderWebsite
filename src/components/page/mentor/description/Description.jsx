@@ -4,7 +4,7 @@ import classes from "./Description.module.css";
 import { Fade } from "react-reveal";
 
 const Description = () => {
-  const points = Constants.Points;
+  const points = Constants.DescriptionPoints;
   return (
     <Container>
       <Row>

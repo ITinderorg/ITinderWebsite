@@ -1,0 +1,18 @@
+.box {
+  max-width: 400px !important;
+}
+
+.btn {
+  padding: 10px 85px;
+  margin: 10px 4px;
+  font-weight: 500;
+  border: 2px solid #0b8cfc;
+  cursor: hand;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  background: transparent !important;
+}
+.btn:hover {
+  border: 2px solid #0b8cfc;
+  background-color: yellow !important;
+}

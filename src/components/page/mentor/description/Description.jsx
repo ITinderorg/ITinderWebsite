@@ -4,7 +4,7 @@ import classes from "./Description.module.css";
 import { Fade } from "react-reveal";
 
 const Description = () => {
-  const points = Constants.DescriptionPoints;
+  const points = Constants.Steps;
   return (
     <section className="section" id="description">
       <Container>

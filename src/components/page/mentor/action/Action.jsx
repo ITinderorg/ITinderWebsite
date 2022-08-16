@@ -1,7 +1,8 @@
 import classes from "./Action.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import SupportImg from "../../../../assets/images/Support.png";
+import SearchMentor from "../../../../assets/images/searchMentor.png";
+import BecomeMentor from "../../../../assets/images/becomeMentor.png";
 
 const Action = () => {
   return (
@@ -33,7 +34,7 @@ const Action = () => {
               <img
                 width="300"
                 height="300"
-                src={SupportImg.src}
+                src={SearchMentor.src}
                 alt="App"
                 loading="lazy"
                 className="mx-auto d-block"
@@ -69,7 +70,7 @@ const Action = () => {
               <img
                 width="300"
                 height="300"
-                src={SupportImg.src}
+                src={BecomeMentor.src}
                 alt="App"
                 loading="lazy"
                 className="mx-auto d-block"

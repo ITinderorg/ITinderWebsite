@@ -30,10 +30,7 @@ const Description = () => {
                 <img
                   width="300"
                   height="300"
-                  src={
-                    require("../../../../assets/images/" + item.imageSrc)
-                      .default.src
-                  }
+                  src={item.imageSrc}
                   alt="App"
                   loading="lazy"
                   className="mx-auto d-block"

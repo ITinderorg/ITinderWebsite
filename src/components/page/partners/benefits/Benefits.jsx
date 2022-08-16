@@ -2,7 +2,6 @@ import classes from "./Benefits.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import constants from "../../../../constants/PartnersConstants";
 import { Fade } from "react-reveal";
-import Delivery from "../../../../assets/images/Delivery.png";
 
 const Benefits = () => {
   const benefits = constants.Benefits;
@@ -33,10 +32,7 @@ const Benefits = () => {
                       <img
                         width="300"
                         height="300"
-                        src={
-                          require("../../../../assets/images/" + item.imageSrc)
-                            .default.src
-                        }
+                        src={item.imageSrc}
                         alt="App"
                         loading="lazy"
                         className="mx-auto d-block"
@@ -62,10 +58,7 @@ const Benefits = () => {
                       <img
                         width="300"
                         height="300"
-                        src={
-                          require("../../../../assets/images/" + item.imageSrc)
-                            .default.src
-                        }
+                        src={item.imageSrc}
                         alt="App"
                         loading="lazy"
                         className="mx-auto d-block"

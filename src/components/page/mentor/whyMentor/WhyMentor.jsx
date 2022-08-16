@@ -32,8 +32,8 @@ const WhyMentor = () => {
                       />
                     </i>
                   </div>
-                  <h5 className="features-title">Швидкий найм</h5>
-                  <p>Клік-клік, пропозиції в твоєму телеграм</p>
+                  <h5 className="features-title">{item.title}</h5>
+                  <p>{item.text}</p>
                 </div>
               </Fade>
             </Col>

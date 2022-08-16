@@ -21,12 +21,13 @@ const WhyMentor = () => {
             return (
               <Col lg={3} md={6} sm={6} key={item.id}>
                 <Fade bottom duration={1200} delay={200 * item.id}>
-                  <div className="features-small-item">
+                  <div className={classes.h360 + " features-small-item"}>
                     <div className="icon">
                       <i>
                         <img
                           width="100"
                           height="100"
+                          src={item.imageSrc}
                           alt="telegram"
                           title="telegram"
                           loading="lazy"

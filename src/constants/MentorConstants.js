@@ -5,6 +5,10 @@ import Step3 from "../assets/images/step3.png";
 import Step4 from "../assets/images/step4.png";
 import Step5 from "../assets/images/step5.png";
 import Step6 from "../assets/images/step6.png";
+import OneVOne from "../assets/images/1v1.png";
+import Experience from "../assets/images/experience.png";
+import Motivation from "../assets/images/motivation.png";
+import Individual from "../assets/images/individual.png";
 
 const MentorConstants = {
   Steps: [
@@ -42,27 +46,27 @@ const MentorConstants = {
   WhyPoints: [
     {
       id: 0,
-      title: "Sample",
-      text: "Заходиш на сайт або у бота",
-      imageSrc: SupportImg.src,
+      title: "Індивідуальність",
+      text: "Ментор зможе підібрати матеріал індивідуально для тебе, щоб ти міг комфортно його опановувати",
+      imageSrc: Individual.src,
     },
     {
       id: 1,
-      title: "Sample",
-      text: "Вибераєш категорію яка тебе цікавить",
-      imageSrc: SupportImg.src,
+      title: "1-на-1",
+      text: "На зустрічі ти зможеш задати ментору любі питання та 100% отримаєш розгорнуту відповідь",
+      imageSrc: OneVOne.src,
     },
     {
       id: 2,
-      title: "Sample",
-      text: "Вибераєш ментора за рівнем та знаннями",
-      imageSrc: SupportImg.src,
+      title: "Мотивація",
+      text: "Розмова з ментором допомагає по-новому поглянути на свою професію і перезавантажитися",
+      imageSrc: Motivation.src,
     },
     {
       id: 3,
-      title: "Sample",
-      text: "Сплачуєш 20% від ціни",
-      imageSrc: SupportImg.src,
+      title: "Досвід",
+      text: "Ментор - досвідчений професіонал своєї справи, на своєму шляху він зустрічав багато перешкод, і точно має декілька порад",
+      imageSrc: Experience.src,
     },
   ],
 };

@@ -11,6 +11,10 @@ const MentorPage = () => {
       <WelcomeArea>
         <h1>
           <strong>ITmentor</strong>
+          <br />
+          знайди свого ментора за
+          <br />
+          <strong>60 секунд</strong>
         </h1>
       </WelcomeArea>
       <Description />

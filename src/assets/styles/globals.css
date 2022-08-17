@@ -42,4 +42,7 @@ ul {
   .text-sm-center {
     justify-content: center !important;
   }
+  .p-sm-2 {
+    padding-left: 0.5rem !important;
+  }
 }

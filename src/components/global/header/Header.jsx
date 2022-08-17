@@ -100,8 +100,12 @@ const Header = () => {
               ></path>
             </svg>
           </Nav.Link>
-          <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
-          <Nav.Link href="/ITmentor">ITmentor</Nav.Link>
+          <Nav.Link href="/ITpartners" className="p-sm-2">
+            ITpartners
+          </Nav.Link>
+          <Nav.Link href="/ITmentor" className="p-sm-2">
+            ITmentor
+          </Nav.Link>
           <Navbar.Collapse>
             <Nav.Link href="/">
               ITeach{" "}

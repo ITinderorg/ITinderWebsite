@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" fixed="top" expand="sm">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" className="d-flex">
           <img
             alt=""
             src={Logo.src}
@@ -17,7 +17,7 @@ const Header = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          ITinder
+          <Navbar.Collapse className="ps-2">ITinder</Navbar.Collapse>
         </Navbar.Brand>
 
         <Nav className="align-items-center">
@@ -101,8 +101,8 @@ const Header = () => {
             </svg>
           </Nav.Link>
           <Nav.Link href="/ITpartners">ITpartners</Nav.Link>
+          <Nav.Link href="/ITmentor">ITmentor</Nav.Link>
           <Navbar.Collapse>
-            <Nav.Link href="/ITmentor">ITmentor</Nav.Link>
             <Nav.Link href="/">
               ITeach{" "}
               <Badge bg="warning" text="dark">

@@ -10,7 +10,7 @@ const StartLearning = () => {
             <Col lg={6} className="offset-lg-3">
               <div className="info">
                 <h1>Почни вчитися вже сьогодні</h1>
-                <p>Обери категорію яка тебе цікавить і вибери ментора</p>
+                <p>Обери категорію, що цікавить та ментора</p>
                 <div className="center-heading">
                   <a href="" className={classes.btn}>
                     <span>Всі категорії</span>

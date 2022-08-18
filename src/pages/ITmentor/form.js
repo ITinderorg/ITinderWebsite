@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Header from "../components/global/header/Header";
-import Loader from "../components/global/loader/Loader";
-import Footer from "../components/global/footer/Footer";
+import Header from "../../components/global/header/Header";
+import Loader from "../../components/global/loader/Loader";
+import Footer from "../../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import MentorPage from "../components/page/mentor/MentorPage";
+import MentorFormPage from "../../components/page/mentorForm/MentorFormPage";
 
-export default function Home() {
+export default function Form() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -26,14 +26,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ITmentor</title>
+        <title>ITmentor - стань ментором</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="author" content="" />
-        <meta name="description" content="ITmentor -" />
+        <meta
+          name="description"
+          content="ITmentor - тисячі IT спеціалістів чекають на ваші пропозиції"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/ITmentor" />
         <link
@@ -57,7 +60,7 @@ export default function Home() {
       )}
 
       <Header />
-      <MentorPage />
+      <MentorFormPage />
       <Footer />
     </>
   );

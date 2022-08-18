@@ -59,7 +59,7 @@ const Action = () => {
                 сьогодні
               </p>
               <div className="center-heading">
-                <a href="" className={classes.btn}>
+                <a href="/ITmentor/form" className={classes.btn}>
                   <span>Стати ментором</span>
                 </a>
               </div>

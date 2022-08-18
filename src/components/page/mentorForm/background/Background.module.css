@@ -1,0 +1,10 @@
+.form {
+  position: relative;
+  height: 90vh;
+  top: 72px;
+}
+.image1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

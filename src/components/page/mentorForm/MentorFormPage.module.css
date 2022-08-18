@@ -1,3 +1,12 @@
 .template {
+  position: absolute;
   height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .template {
+    display: none;
+  }
 }

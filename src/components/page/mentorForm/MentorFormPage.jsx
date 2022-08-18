@@ -5,6 +5,9 @@ import FormCard from "./card/FormCard";
 const MentorFormPage = () => {
   return (
     <>
+      <div className={classes.template}>
+        <Background />
+      </div>
       <FormCard />
     </>
   );

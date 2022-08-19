@@ -1,6 +1,7 @@
 import classes from "./OurPartners.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import constants from "../../../../constants/PartnersConstants";
+import Image from "next/image";
 
 const OurPartners = () => {
   const partners = constants.Partners;
@@ -22,9 +23,9 @@ const OurPartners = () => {
                   <div className="features-small-item">
                     <div className="icon">
                       <i>
-                        <img
-                          width="100"
-                          height="100"
+                        <Image
+                          width={100}
+                          height={100}
                           src={
                             require("../../../../assets/images/" +
                               item.imageName).default.src

@@ -7,20 +7,23 @@ const Background = () => {
       <div className={classes.gearGroup1}>
         <img
           src={GearImg.src}
-          height="50px"
-          width="50px"
+          height={50}
+          width={50}
+          alt="gear"
           className={classes.image1}
         />
         <img
           src={GearImg.src}
-          height="90px"
-          width="90px"
+          height={90}
+          width={90}
+          alt="gear"
           className={classes.image2}
         />
         <img
           src={GearImg.src}
-          height="70px"
-          width="70px"
+          height={70}
+          width={70}
+          alt="gear"
           className={classes.image3}
         />
       </div>
@@ -28,20 +31,23 @@ const Background = () => {
       <div className={classes.gearGroup2}>
         <img
           src={GearImg.src}
-          height="50px"
-          width="50px"
+          height={50}
+          width={50}
+          alt="gear"
           className={classes.image1_2}
         />
         <img
           src={GearImg.src}
-          height="90px"
-          width="90px"
+          height={90}
+          width={90}
+          alt="gear"
           className={classes.image2_2}
         />
         <img
           src={GearImg.src}
-          height="70px"
-          width="70px"
+          height={70}
+          width={70}
+          alt="gear"
           className={classes.image3_2}
         />
       </div>

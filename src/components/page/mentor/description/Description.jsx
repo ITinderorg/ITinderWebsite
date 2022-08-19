@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Constants from "../../../../constants/MentorConstants.js";
 import classes from "./Description.module.css";
 import { Fade } from "react-reveal";
+import Image from "next/image";
 
 const Description = () => {
   const points = Constants.Steps;
@@ -29,8 +30,8 @@ const Description = () => {
               <Col lg={6} md={6} sm={12}>
                 <Fade left duration={1700} distance="25px">
                   <img
-                    width="300"
-                    height="300"
+                    width={300}
+                    height={300}
                     src={item.imageSrc}
                     alt="App"
                     loading="lazy"

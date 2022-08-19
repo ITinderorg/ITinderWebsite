@@ -30,8 +30,8 @@ const Benefits = () => {
                   <Col lg={7} md={6} sm={12}>
                     <Fade left duration={1700} distance="25px">
                       <img
-                        width="300"
-                        height="300"
+                        width={300}
+                        height={300}
                         src={item.imageSrc}
                         alt="App"
                         loading="lazy"
@@ -56,8 +56,8 @@ const Benefits = () => {
                   <Col lg={7} md={6} sm={12}>
                     <Fade right duration={1700} distance="25px">
                       <img
-                        width="300"
-                        height="300"
+                        width={300}
+                        height={300}
                         src={item.imageSrc}
                         alt="App"
                         loading="lazy"

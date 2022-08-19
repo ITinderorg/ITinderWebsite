@@ -2,6 +2,7 @@ import classes from "./Action.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-reveal";
 import Link from "next/link";
+import Image from "next/image";
 import SearchMentor from "../../../../assets/images/searchMentor.png";
 import BecomeMentor from "../../../../assets/images/becomeMentor.png";
 
@@ -33,8 +34,8 @@ const Action = () => {
           <Col lg={6} md={6} sm={12}>
             <Fade right duration={1700} distance="25px">
               <img
-                width="300"
-                height="300"
+                width={300}
+                height={300}
                 src={SearchMentor.src}
                 alt="App"
                 loading="lazy"
@@ -71,8 +72,8 @@ const Action = () => {
           <Col lg={6} md={6} sm={12}>
             <Fade left duration={1700} distance="25px">
               <img
-                width="300"
-                height="300"
+                width={300}
+                height={300}
                 src={BecomeMentor.src}
                 alt="App"
                 loading="lazy"

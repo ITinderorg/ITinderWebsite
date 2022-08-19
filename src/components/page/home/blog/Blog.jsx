@@ -2,6 +2,7 @@ import "./Blog.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import KateImg from "../../../../assets/images/kaaaaate.jpg";
 import AndryImg from "../../../../assets/images/andyyy.jpg";
+import Image from "next/image";
 
 const Blog = () => {
   const people = [
@@ -40,10 +41,10 @@ const Blog = () => {
               <Col lg={4} md={6} sm={12} key={item.name}>
                 <div className="blog-post-thumb">
                   <div className="img">
-                    <img
+                    <Image
                       src={item.imageSrc}
-                      width="270"
-                      height="360"
+                      width={270}
+                      height={360}
                       alt="Blog"
                       title="Blog"
                       loading="lazy"

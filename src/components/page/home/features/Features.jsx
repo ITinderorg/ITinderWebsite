@@ -8,6 +8,7 @@ import MainPageBot from "../../../../assets/images/mainpagebot.jpg";
 import Recruiter from "../../../../assets/images/recruiter.jpg";
 import Candidate from "../../../../assets/images/candidate.jpg";
 import Fade from "react-reveal/Fade";
+import Image from "next/image";
 
 const Features = () => {
   return (
@@ -22,9 +23,9 @@ const Features = () => {
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
-                          <img
-                            width="100"
-                            height="100"
+                          <Image
+                            width={100}
+                            height={100}
                             src={ITinder.src}
                             alt="telegram"
                             title="telegram"
@@ -42,9 +43,9 @@ const Features = () => {
                     <div className="features-small-item">
                       <div className="icon">
                         <i>
-                          <img
-                            width="100"
-                            height="100"
+                          <Image
+                            width={100}
+                            height={100}
                             src={UAFlag.src}
                             alt="UA"
                             title="UA"
@@ -66,8 +67,8 @@ const Features = () => {
                         <div className="icon">
                           <i>
                             <img
-                              width="120"
-                              height="27"
+                              width={120}
+                              height={27}
                               src={Liqpay.src}
                               alt="Liqpay"
                               title="Liqpay"
@@ -78,8 +79,8 @@ const Features = () => {
                         <div className="icon">
                           <i>
                             <img
-                              width="80"
-                              height="80"
+                              width={80}
+                              height={80}
                               src={Bitcoin.src}
                               alt="Bitcoin"
                               title="Bitcoin"
@@ -112,9 +113,9 @@ const Features = () => {
               className="align-self-center feature-image"
             >
               <Fade left duration={1700} distance="25px">
-                <img
-                  width="400"
-                  height="464"
+                <Image
+                  width={400}
+                  height={464}
                   src={MainPageBot.src}
                   alt="App"
                   title="App"
@@ -170,9 +171,9 @@ const Features = () => {
               className="align-self-center mobile-bottom-fix-big"
             >
               <Fade right duration={1700} distance="25px">
-                <img
-                  width="420"
-                  height="487"
+                <Image
+                  width={420}
+                  height={487}
                   src={Recruiter.src}
                   alt="App"
                   title="Recruiter"
@@ -197,9 +198,9 @@ const Features = () => {
               className="align-self-center feature-image"
             >
               <Fade left duration={1700} distance="25px">
-                <img
-                  width="400"
-                  height="464"
+                <Image
+                  width={400}
+                  height={464}
                   src={Candidate.src}
                   alt="App"
                   title="Candidate"

@@ -39,6 +39,10 @@ export default function ITmentor() {
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/ITmentor/form" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+          rel="stylesheet"
+        />
       </Head>
 
       {transition((style, item) =>

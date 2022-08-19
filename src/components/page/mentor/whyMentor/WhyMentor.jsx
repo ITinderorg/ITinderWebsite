@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import Constants from "../../../../constants/MentorConstants.js";
 import classes from "./WhyMentor.module.css";
+import Image from "next/image";
 
 const WhyMentor = () => {
   const points = Constants.WhyPoints;
@@ -24,9 +25,9 @@ const WhyMentor = () => {
                   <div className={classes.h360 + " features-small-item"}>
                     <div className="icon">
                       <i>
-                        <img
-                          width="100"
-                          height="100"
+                        <Image
+                          width={100}
+                          height={100}
                           src={item.imageSrc}
                           alt="telegram"
                           title="telegram"

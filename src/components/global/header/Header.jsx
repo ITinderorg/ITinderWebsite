@@ -2,19 +2,19 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Logo from "../../../assets/images/Logo.png";
-import ComebackAliveLogo from "../../../assets/images/logo_come_back_alive_ukr.svg";
 import Badge from "react-bootstrap/Badge";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" fixed="top" expand="sm">
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img
+          <Image
             alt=""
             src={Logo.src}
-            width="30"
-            height="30"
+            width={30}
+            height={30}
             className="d-inline-block align-top"
           />{" "}
           <Navbar.Collapse className="ps-2">ITinder</Navbar.Collapse>

@@ -39,14 +39,6 @@ export default function Form() {
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/ITmentor" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-        ></link>
       </Head>
 
       {transition((style, item) =>

@@ -1,6 +1,7 @@
 import classes from "./Action.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-reveal";
+import Link from "next/link";
 import SearchMentor from "../../../../assets/images/searchMentor.png";
 import BecomeMentor from "../../../../assets/images/becomeMentor.png";
 
@@ -59,9 +60,11 @@ const Action = () => {
                 сьогодні
               </p>
               <div className="center-heading">
-                <a href="/ITmentor/form" className={classes.btn}>
-                  <span>Стати ментором</span>
-                </a>
+                <Link href="/ITmentor/form">
+                  <a className={classes.btn}>
+                    <span>Стати ментором</span>
+                  </a>
+                </Link>
               </div>
             </div>
           </Col>

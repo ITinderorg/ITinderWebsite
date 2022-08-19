@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
 import MentorPage from "../../components/page/mentor/MentorPage";
 
-export default function Home() {
+export default function ITmentor() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -38,15 +38,7 @@ export default function Home() {
           content="ITmentor - тисячі IT спеціалістів чекають на ваші пропозиції"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="/ITmentor" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-        ></link>
+        <link rel="canonical" href="/ITmentor/form" />
       </Head>
 
       {transition((style, item) =>

@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import useInput from "../../../../utils/hooks/useInput";
 import { useState } from "react";
 import { useEffect } from "react";
+import GearImg from "../../../../assets/images/gear.png";
 
 const FormCard = () => {
   const name = useInput("", { minLength: 3, isEmpty: false });
@@ -59,6 +60,31 @@ const FormCard = () => {
           </Col>
         </Row>
         <Row>
+          <Col lg={1}>
+            <div className={classes.gearGroup2}>
+              <img
+                src={GearImg.src}
+                height={50}
+                width={50}
+                alt="gear"
+                className={classes.image1_2}
+              />
+              <img
+                src={GearImg.src}
+                height={90}
+                width={90}
+                alt="gear"
+                className={classes.image2_2}
+              />
+              <img
+                src={GearImg.src}
+                height={70}
+                width={70}
+                alt="gear"
+                className={classes.image3_2}
+              />
+            </div>
+          </Col>
           <Col lg={6} md={8} className="offset-lg-3 offset-md-2">
             <Form onSubmit={onSubmit}>
               <Form.Group className="mb-3" controlId="name">
@@ -176,6 +202,31 @@ const FormCard = () => {
                 </Button>
               </div>
             </Form>
+          </Col>
+          <Col lg={1}>
+            <div className={classes.gearGroup1}>
+              <img
+                src={GearImg.src}
+                height={50}
+                width={50}
+                alt="gear"
+                className={classes.image1}
+              />
+              <img
+                src={GearImg.src}
+                height={90}
+                width={90}
+                alt="gear"
+                className={classes.image2}
+              />
+              <img
+                src={GearImg.src}
+                height={70}
+                width={70}
+                alt="gear"
+                className={classes.image3}
+              />
+            </div>
           </Col>
         </Row>
       </Container>

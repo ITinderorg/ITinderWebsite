@@ -4,6 +4,7 @@ import useInput from "../../../../utils/hooks/useInput";
 import { useState } from "react";
 import { useEffect } from "react";
 import GearImg from "../../../../assets/images/gear.png";
+import ITmentorAPI from "../../../../utils/apis/ITmentorAPI";
 
 const FormCard = () => {
   const name = useInput("", { minLength: 3, isEmpty: false });
@@ -13,6 +14,7 @@ const FormCard = () => {
   const price = useInput(0, { greaterThan: 0 });
   const contact = useInput("", { isEmpty: false });
   const [photo, setPhoto] = useState();
+  const [resultForm, setResultForm] = useState(false);
 
   const [inputValid, setInputValid] = useState(false);
 
@@ -36,8 +38,19 @@ const FormCard = () => {
     contact.inputValid,
   ]);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    let form = new FormData();
+    form.append("Name", name.value);
+    form.append("Skills", skills.value);
+    form.append("Position", position.value);
+    form.append("Description", description.value);
+    form.append("Price", price.value);
+    form.append("Contact", contact.value);
+    form.append("Photo", photo);
+
+    await ITmentorAPI.SendMentorForm(form);
   };
 
   const onPhotoChange = (e) => {
@@ -85,7 +98,7 @@ const FormCard = () => {
               />
             </div>
           </Col>
-          <Col lg={6} md={8} className="offset-lg-3 offset-md-2">
+          <Col lg={6} md={8} className="offset-lg-2 offset-md-2">
             <Form onSubmit={onSubmit}>
               <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Ім&apos;я та призвіще</Form.Label>

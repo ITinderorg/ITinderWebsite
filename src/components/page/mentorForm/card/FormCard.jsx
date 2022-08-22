@@ -4,7 +4,9 @@ import useInput from "../../../../utils/hooks/useInput";
 import { useState } from "react";
 import { useEffect } from "react";
 import GearImg from "../../../../assets/images/gear.png";
+import RocketImg from "../../../../assets/images/rocket.png";
 import ITmentorAPI from "../../../../utils/apis/ITmentorAPI";
+import { useTransition, animated } from "react-spring";
 
 const FormCard = () => {
   const name = useInput("", { minLength: 3, isEmpty: false });
@@ -14,7 +16,6 @@ const FormCard = () => {
   const price = useInput(0, { greaterThan: 0 });
   const contact = useInput("", { isEmpty: false });
   const [photo, setPhoto] = useState();
-  const [resultForm, setResultForm] = useState(false);
 
   const [inputValid, setInputValid] = useState(false);
 
@@ -51,11 +52,27 @@ const FormCard = () => {
     form.append("Photo", photo);
 
     await ITmentorAPI.SendMentorForm(form);
+
+    setRocket(true);
+    setInterval(function () {
+      setRocket(false);
+    }, 8000);
   };
 
   const onPhotoChange = (e) => {
     setPhoto(e.target.files[0]);
   };
+
+  const [isRocket, setRocket] = useState(false);
+  const transition = useTransition(isRocket, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    to: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: {
+      duration: 800,
+    },
+  });
 
   return (
     <section className="section" id="formCard">
@@ -243,6 +260,48 @@ const FormCard = () => {
           </Col>
         </Row>
       </Container>
+
+      {transition((style, item) =>
+        item ? (
+          <animated.div style={style} className="loaderWrapper">
+            <Container>
+              <Row>
+                <Col lg={8} className="offset-lg-2 text-center">
+                  <div className={classes.rocket_text}>
+                    <h1>Твоя заява була успішно відправлена!</h1>
+                    <p>
+                      Скоро твої дані веріфікують і ти отримаєш фідбек.
+                      <br />
+                      Бажаємо успіху!
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col lg={12} className={classes.rocket_col}>
+                  <div className={classes.rocket_wrapper}>
+                    <img
+                      src={RocketImg.src}
+                      width={250}
+                      height={250}
+                      alt="rocket"
+                      className={classes.rocket}
+                    />
+                    <div className={classes.rocket_arr} />
+                    <div className={classes.rocket_arr2} />
+                    <div className={classes.rocket_arr3} />
+                    <div className={classes.rocket_arr4} />
+                    <div className={classes.rocket_arr5} />
+                    <div className={classes.rocket_arr6} />
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </animated.div>
+        ) : (
+          ""
+        )
+      )}
     </section>
   );
 };

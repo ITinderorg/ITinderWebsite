@@ -2,7 +2,6 @@ import classes from "./Action.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-reveal";
 import Link from "next/link";
-import Image from "next/image";
 import SearchMentor from "../../../../assets/images/searchMentor.png";
 import BecomeMentor from "../../../../assets/images/becomeMentor.png";
 
@@ -25,9 +24,11 @@ const Action = () => {
                 Сотні висококваліфікованих спеціалістів готові тобі допомогти
               </p>
               <div className="center-heading">
-                <a href="" className={classes.btn}>
-                  <span>Обрати ментора</span>
-                </a>
+                <Link href="/ITmentor/mentors">
+                  <a href="" className={classes.btn}>
+                    <span>Обрати ментора</span>
+                  </a>
+                </Link>
               </div>
             </div>
           </Col>

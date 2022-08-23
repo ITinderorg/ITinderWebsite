@@ -75,7 +75,7 @@ const FormCard = () => {
   });
 
   return (
-    <section className="section" id="formCard">
+    <section className={classes.form_card + " section"} id="formCard">
       <Container>
         <Row>
           <Col lg={12}>

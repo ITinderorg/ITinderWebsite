@@ -1,5 +1,6 @@
 import classes from "./StartLearning.module.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Link from "next/link";
 
 const StartLearning = () => {
   return (
@@ -12,10 +13,12 @@ const StartLearning = () => {
                 <h1>Почни вчитися вже сьогодні</h1>
                 <p>Обери категорію, що цікавить та ментора</p>
                 <div className="center-heading">
-                  <a href="" className={classes.btn}>
-                    <span>Всі категорії</span>
-                    <div className={classes.transition}></div>
-                  </a>
+                  <Link href="/ITmentor/mentors">
+                    <a href="" className={classes.btn}>
+                      <span>Всі категорії</span>
+                      <div className={classes.transition}></div>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </Col>

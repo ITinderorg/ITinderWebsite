@@ -6,6 +6,8 @@ const useValidation = (value, validators) => {
   const [minLengthError, setMinLengthError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [greaterError, setGreaterError] = useState(false);
+  const [linkedInError, setLinkedInError] = useState(false);
+  const [numberError, setNumberError] = useState(false);
   const [inputValid, setInputValid] = useState(false);
 
   useEffect(() => {
@@ -27,28 +29,61 @@ const useValidation = (value, validators) => {
             )
             ? setEmailError(false)
             : setEmailError(true);
+          break;
         case "greaterThan":
           value > validators[validator]
             ? setGreaterError(false)
             : setGreaterError(true);
+          break;
+        case "isLinkedIn":
+          String(value)
+            .toLowerCase()
+            .match(
+              /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))/
+            )
+            ? setLinkedInError(false)
+            : setLinkedInError(true);
+          break;
+        case "isNumber":
+          String(value)
+            .toLowerCase()
+            .match(/^[0-9]+$/)
+            ? setNumberError(false)
+            : setNumberError(true);
           break;
       }
     }
   }, [value]);
 
   useEffect(() => {
-    if (isEmpty || minLengthError || emailError || greaterError) {
+    if (
+      isEmpty ||
+      minLengthError ||
+      emailError ||
+      greaterError ||
+      linkedInError ||
+      numberError
+    ) {
       setInputValid(false);
     } else {
       setInputValid(true);
     }
-  }, [isEmpty, minLengthError, emailError, greaterError]);
+  }, [
+    isEmpty,
+    minLengthError,
+    emailError,
+    greaterError,
+    linkedInError,
+    numberError,
+  ]);
 
   return {
     isEmpty,
     minLengthError,
     emailError,
     greaterError,
+    linkedInError,
+    numberError,
     inputValid,
   };
 };

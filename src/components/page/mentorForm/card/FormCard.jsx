@@ -14,7 +14,11 @@ const FormCard = () => {
   const position = useInput("");
   const description = useInput("", { isEmpty: false });
   const price = useInput(0, { greaterThan: 0 });
-  const contact = useInput("", { isEmpty: false });
+  const email = useInput("", { isEmpty: false, isEmail: true });
+  const linkedin = useInput("", { isEmpty: false, isLinkedIn: true });
+  const telegramid = useInput("", { isEmpty: false, isNumber: true });
+  const [privacyCheck, setPrivacyCheck] = useState(false);
+  const [resume, setResume] = useState();
   const [photo, setPhoto] = useState();
 
   const [inputValid, setInputValid] = useState(false);
@@ -25,7 +29,10 @@ const FormCard = () => {
       skills.inputValid &&
       description.inputValid &&
       price.inputValid &&
-      contact.inputValid
+      email.inputValid &&
+      linkedin.inputValid &&
+      telegramid.inputValid &&
+      privacyCheck
     ) {
       setInputValid(true);
     } else {
@@ -36,8 +43,13 @@ const FormCard = () => {
     skills.inputValid,
     description.inputValid,
     price.inputValid,
-    contact.inputValid,
+    email.inputValid,
+    linkedin.inputValid,
+    telegramid.inputValid,
+    privacyCheck,
   ]);
+
+  console.log(privacyCheck);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +60,7 @@ const FormCard = () => {
     form.append("Position", position.value);
     form.append("Description", description.value);
     form.append("Price", price.value);
-    form.append("Contact", contact.value);
+    form.append("Email", email.value);
     form.append("Photo", photo);
 
     await ITmentorAPI.SendMentorForm(form);
@@ -75,7 +87,7 @@ const FormCard = () => {
   });
 
   return (
-    <section className={classes.form_card + " section"} id="formCard">
+    <section className="section" id="formCard">
       <Container>
         <Row>
           <Col lg={12}>
@@ -199,27 +211,107 @@ const FormCard = () => {
                 </Form.Text>
               )}
 
-              <Form.Group className="mb-3" controlId="contact">
-                <Form.Label>Контакти</Form.Label>
+              <Form.Group className="mb-3" controlId="email">
+                <Form.Label>Email</Form.Label>
                 <Form.Control
-                  onChange={(e) => contact.onChange(e)}
-                  onBlur={(e) => contact.onBlur(e)}
-                  value={contact.value}
+                  onChange={(e) => email.onChange(e)}
+                  onBlur={(e) => email.onBlur(e)}
+                  value={email.value}
                   type="text"
-                  placeholder="Залиш свої контакти (номер телефону, нік у телеграм, тощо)"
+                  placeholder="Залиш свій email"
                   required
                 />
-                {contact.isDirty && contact.isEmpty && (
+                {email.isDirty && email.isEmpty && (
                   <Form.Text style={{ color: "red" }}>
-                    Ти маєш залишити хоча б один контакт
+                    Ти маєш залишити email
                   </Form.Text>
                 )}
+                {email.isDirty && email.emailError && !email.isEmpty && (
+                  <Form.Text style={{ color: "red" }}>
+                    Неправильний формат email
+                  </Form.Text>
+                )}
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="linkedin">
+                <Form.Label>LinkedIn</Form.Label>
+                <Form.Control
+                  onChange={(e) => linkedin.onChange(e)}
+                  onBlur={(e) => linkedin.onBlur(e)}
+                  value={linkedin.value}
+                  type="text"
+                  placeholder="Залиш посилання на свій LinkedIn"
+                  required
+                />
+                {linkedin.isDirty && linkedin.isEmpty && (
+                  <Form.Text style={{ color: "red" }}>
+                    Ти маєш залишити LinkedIn
+                  </Form.Text>
+                )}
+                {linkedin.isDirty &&
+                  linkedin.linkedInError &&
+                  !linkedin.isEmpty && (
+                    <Form.Text style={{ color: "red" }}>
+                      Неправильне посилання
+                    </Form.Text>
+                  )}
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="telegramid">
+                <Form.Label>Telegram Id</Form.Label>
+                <Form.Control
+                  onChange={(e) => telegramid.onChange(e)}
+                  onBlur={(e) => telegramid.onBlur(e)}
+                  value={telegramid.value}
+                  type="text"
+                  placeholder="Залиш свій Telegram Id"
+                  required
+                />
+                <Form.Text>
+                  Знайди свій Telegram Id{" "}
+                  <a
+                    href="https://t.me/userinfobot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    тут
+                  </a>
+                </Form.Text>
+                {telegramid.isDirty && telegramid.isEmpty && (
+                  <Form.Text style={{ color: "red" }}>
+                    <br />
+                    Ти маєш залишити telegram id
+                  </Form.Text>
+                )}
+                {telegramid.isDirty &&
+                  telegramid.numberError &&
+                  !telegramid.isEmpty && (
+                    <Form.Text style={{ color: "red" }}>
+                      <br />
+                      Telegram Id має містити тільки цифри 0-9
+                    </Form.Text>
+                  )}
               </Form.Group>
 
               <Form.Group className="mb-3 files" controlId="file">
                 <Form.Label>Завантаж своє фото</Form.Label>
                 <Form.Control type="file" onChange={onPhotoChange} />
               </Form.Group>
+
+              <Form.Check type="checkbox">
+                <Form.Check.Input
+                  type="checkbox"
+                  value={privacyCheck}
+                  isValid={privacyCheck}
+                  onChange={(e) => setPrivacyCheck(!privacyCheck)}
+                />
+                <Form.Check.Label>
+                  Я погоджуюсь з політикою конфіденційності
+                </Form.Check.Label>
+                <Form.Control.Feedback type="valid">
+                  Супер! 😊
+                </Form.Control.Feedback>
+              </Form.Check>
 
               <div className="center-heading">
                 <Button

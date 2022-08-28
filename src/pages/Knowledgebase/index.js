@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Header from "../components/global/header/Header";
-import Loader from "../components/global/loader/Loader";
-import Footer from "../components/global/footer/Footer";
+import Header from "../../components/global/header/Header";
+import Loader from "../../components/global/loader/Loader";
+import Footer from "../../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import PartnersPage from "../components/page/partners/PartnersPage";
+import KnowledgebasePage from "../../components/page/knowledgebase/KnowledgebasePage";
 
-export default function Home() {
+export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -56,7 +56,7 @@ export default function Home() {
       )}
 
       <Header />
-      <PartnersPage />
+      <KnowledgebasePage />
       <Footer />
     </>
   );

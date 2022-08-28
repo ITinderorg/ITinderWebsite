@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Header from "../components/global/header/Header";
-import Loader from "../components/global/loader/Loader";
-import Footer from "../components/global/footer/Footer";
+import Header from "../../components/global/header/Header";
+import Loader from "../../components/global/loader/Loader";
+import Footer from "../../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import PartnersPage from "../components/page/partners/PartnersPage";
+import PrivacyPolicy from "../../components/page/knowledgebase/privacyPolicy/PrivacyPolicy";
 
-export default function Home() {
+export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -35,10 +35,11 @@ export default function Home() {
         <meta name="author" content="" />
         <meta
           name="description"
-          content="ITpartners - Запрошуємо бізнес до партнерства — тисячі IT спеціалістів чекають на ваші пропозиції🙌"
+          content="Перший Український бот для пошуку роботи в IT!
+          Ти рекрутер і в пошуку IT - шників? Заповнюй вакансію, отримай матч від кандидата, чекай на CV!"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="/ITpartners" />
+        <link rel="canonical" href="/Knowledgebase/PrivacyPolicy" />
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
           rel="stylesheet"
@@ -56,7 +57,7 @@ export default function Home() {
       )}
 
       <Header />
-      <PartnersPage />
+      <PrivacyPolicy />
       <Footer />
     </>
   );

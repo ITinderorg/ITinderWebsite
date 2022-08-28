@@ -306,7 +306,14 @@ const FormCard = () => {
                   onChange={(e) => setPrivacyCheck(!privacyCheck)}
                 />
                 <Form.Check.Label>
-                  Я погоджуюсь з політикою конфіденційності
+                  Я погоджуюсь з{" "}
+                  <a
+                    href="/Knowledgebase/PrivacyPolicy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    політикою конфіденційності
+                  </a>
                 </Form.Check.Label>
                 <Form.Control.Feedback type="valid">
                   Супер! 😊

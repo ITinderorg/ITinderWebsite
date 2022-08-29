@@ -4,7 +4,7 @@ import useInput from "../../../../utils/hooks/useInput";
 import { useState } from "react";
 import { useEffect } from "react";
 import GearImg from "../../../../assets/images/gear.png";
-import RocketImg from "../../../../assets/images/rocket.png";
+import RocketImg from "../../../../assets/images/Rocket.png";
 import ITmentorAPI from "../../../../utils/apis/ITmentorAPI";
 import { useTransition, animated } from "react-spring";
 
@@ -48,8 +48,6 @@ const FormCard = () => {
     telegramid.inputValid,
     privacyCheck,
   ]);
-
-  console.log(privacyCheck);
 
   const onSubmit = async (e) => {
     e.preventDefault();

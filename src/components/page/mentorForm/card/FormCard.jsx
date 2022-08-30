@@ -144,23 +144,6 @@ const FormCard = () => {
                 )}
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="skills">
-                <Form.Label>Навички</Form.Label>
-                <Form.Control
-                  onChange={(e) => skills.onChange(e)}
-                  onBlur={(e) => skills.onBlur(e)}
-                  value={skills.value}
-                  type="text"
-                  placeholder="Опиши свої навички"
-                  required
-                />
-                {skills.isDirty && skills.isEmpty && (
-                  <Form.Text style={{ color: "red" }}>
-                    Ти маєш описати хоча б одну навичку
-                  </Form.Text>
-                )}
-              </Form.Group>
-
               <Form.Group className="mb-3" controlId="position">
                 <Form.Label>Позиція</Form.Label>
                 <Form.Control
@@ -172,6 +155,25 @@ const FormCard = () => {
                 />
               </Form.Group>
 
+              <Form.Group className="mb-3" controlId="skills">
+                <Form.Label>Навички</Form.Label>
+                <Form.Control
+                  onChange={(e) => skills.onChange(e)}
+                  onBlur={(e) => skills.onBlur(e)}
+                  value={skills.value}
+                  type="text"
+                  placeholder="Опиши свої навички"
+                  as="textarea"
+                  rows={3}
+                  required
+                />
+                {skills.isDirty && skills.isEmpty && (
+                  <Form.Text style={{ color: "red" }}>
+                    Ти маєш описати хоча б одну навичку
+                  </Form.Text>
+                )}
+              </Form.Group>
+
               <Form.Group className="mb-3" controlId="description">
                 <Form.Label>Опис</Form.Label>
                 <Form.Control
@@ -179,6 +181,8 @@ const FormCard = () => {
                   onBlur={(e) => description.onBlur(e)}
                   value={description.value}
                   type="text"
+                  as="textarea"
+                  rows={5}
                   placeholder="Опиши чим ти можеш бути корисним"
                   required
                 />

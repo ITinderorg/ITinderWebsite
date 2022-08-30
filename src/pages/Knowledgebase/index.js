@@ -26,7 +26,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>ITpartner</title>
+        <title>ITinder Knowledgebase</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"

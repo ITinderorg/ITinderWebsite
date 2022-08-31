@@ -60,7 +60,7 @@ const FormCard = () => {
     form.append("Price", price.value);
     form.append("Email", email.value);
     form.append("Photo", photo);
-
+    console.log(photo);
     await ITmentorAPI.SendMentorForm(form);
 
     setRocket(true);

@@ -1,0 +1,9 @@
+.categories_wrapper {
+  display: grid;
+}
+.category_link {
+  cursor: pointer;
+  color: grey;
+  padding: 10px 0px;
+  font-size: 20px;
+}

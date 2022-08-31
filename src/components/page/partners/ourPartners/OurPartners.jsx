@@ -27,7 +27,11 @@ const OurPartners = () => {
                 >
                   <div className={classes.item}>
                     <div className="icon">
-                      <i>
+                      <a
+                        href="https://kitcode.dev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           width="140"
                           height="160"
@@ -39,7 +43,7 @@ const OurPartners = () => {
                           title="telegram"
                           loading="lazy"
                         />
-                      </i>
+                      </a>
                     </div>
                   </div>
                 </Col>

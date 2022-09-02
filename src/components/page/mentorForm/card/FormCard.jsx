@@ -194,7 +194,7 @@ const FormCard = () => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="price">
-                <Form.Label>Ціна (у $)</Form.Label>
+                <Form.Label>Ціна (у $ за годину)</Form.Label>
                 <Form.Control
                   onChange={(e) => price.onChange(e)}
                   onBlur={(e) => price.onBlur(e)}

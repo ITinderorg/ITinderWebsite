@@ -1,12 +1,17 @@
 import Head from "next/head";
-import Header from "../../components/global/header/Header";
-import Loader from "../../components/global/loader/Loader";
-import Footer from "../../components/global/footer/Footer";
+import Header from "../../../components/global/header/Header";
+import Loader from "../../../components/global/loader/Loader";
+import Footer from "../../../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import MentorCategoriesPage from "../../components/page/mentorCategories/MentorCategoriesPage";
+import MentorDetailsPage from "../../../components/page/mentorDetails/MentorDetailsPage";
+import { useRouter } from "next/router";
+import ITmentorAPI from "../../../utils/apis/ITmentorAPI";
 
-export default function Mentors() {
+export default function Mentor(props) {
+  const router = useRouter();
+  const { id } = router.query;
+
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -17,16 +22,30 @@ export default function Mentors() {
     },
   });
 
+  const [mentor, setMentor] = useState({
+    id: 0,
+    name: "",
+    categoryid: 0,
+    description: "",
+    skills: "",
+    position: "",
+    price: 0,
+  });
+
   useEffect(() => {
-    setInterval(function () {
-      setIsLoading(false);
-    }, 150);
+    const fetchData = async () => {
+      setMentor(await ITmentorAPI.GetMentorById(id));
+      setInterval(function () {
+        setIsLoading(false);
+      }, 150);
+    };
+    fetchData();
   }, []);
 
   return (
     <>
       <Head>
-        <title>ITmentor</title>
+        <title>ITmentor - деталі ментора</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -38,7 +57,7 @@ export default function Mentors() {
           content="ITmentor - тисячі IT спеціалістів чекають на ваші пропозиції"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="/ITmentor/mentors" />
+        <link rel="canonical" href="/ITmentor/mentor" />
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
           rel="stylesheet"
@@ -56,7 +75,7 @@ export default function Mentors() {
       )}
 
       <Header />
-      <MentorCategoriesPage />
+      <MentorDetailsPage mentor={mentor} />
       <Footer />
     </>
   );

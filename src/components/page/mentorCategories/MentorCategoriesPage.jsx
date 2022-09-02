@@ -1,29 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
+import { useObserver } from "../../../utils/hooks/useObserver";
 import classes from "./MentorCategoriesPage.module.css";
 import Link from "next/link";
-import { useEffect } from "react";
 import ITmentorAPI from "../../../utils/apis/ITmentorAPI";
 
 const MentorCategoriesPage = ({ categories }) => {
   const [searchText, setSearchText] = useState("");
   const [mentors, setMentors] = useState([]);
   const [shownMentors, setShownMentors] = useState(mentors);
+  const [isMentorsLoading, setMentorsLoading] = useState(true);
+  const [totalPages, setTotalPages] = useState(0);
+  const [limit, setLimit] = useState(9);
+  const [page, setPage] = useState(1);
+  const lastElement = useRef();
+
+  const fetchData = async () => {
+    let new_mentors = await ITmentorAPI.GetAllMentors(limit, page);
+    setMentors([...mentors, ...new_mentors]);
+
+    console.log(new_mentors);
+    setShownMentors([...mentors, ...new_mentors]);
+    setMentorsLoading(false);
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      setMentors(await ITmentorAPI.GetAllMentors());
-      setShownMentors(await ITmentorAPI.GetAllMentors());
-    };
     fetchData();
   }, []);
 
-  function showFilteredMentors(categoryid) {
+  function showFilteredMentors(categoryId) {
     let mentorsToShow = mentors;
-    if (categoryid != 0)
-      mentorsToShow = mentors.filter((m) => m.categoryid == categoryid);
+    if (categoryId != 0)
+      mentorsToShow = mentors.filter((m) => m.categoryId == categoryId);
     setShownMentors(mentorsToShow);
   }
+
+  useEffect(() => {
+    fetchData(limit, page);
+  }, [page, limit]);
+
+  useObserver(lastElement, true, isMentorsLoading, () => {
+    setPage(page + 1);
+  });
 
   return (
     <section
@@ -69,7 +87,9 @@ const MentorCategoriesPage = ({ categories }) => {
           </Col>
           <Col lg={10} md={10} sm={8}>
             <Row>
-              {shownMentors != undefined && shownMentors.length != 0 ? (
+              {isMentorsLoading ? (
+                <h1>Loading...</h1>
+              ) : shownMentors != undefined && shownMentors.length != 0 ? (
                 shownMentors.map((item) => {
                   return (
                     <Col lg={4} md={6} sm={12} key={item.id} className="pb-3">
@@ -102,6 +122,7 @@ const MentorCategoriesPage = ({ categories }) => {
               )}
             </Row>
           </Col>
+          <div ref={lastElement} />
         </Row>
       </Container>
     </section>

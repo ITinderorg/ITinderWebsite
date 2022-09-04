@@ -8,7 +8,7 @@ import MentorDetailsPage from "../../../components/page/mentorDetails/MentorDeta
 import { useRouter } from "next/router";
 import ITmentorAPI from "../../../utils/apis/ITmentorAPI";
 
-export default function Mentor(props) {
+export default function Mentor() {
   const router = useRouter();
   const { id } = router.query;
 
@@ -30,17 +30,19 @@ export default function Mentor(props) {
     skills: "",
     position: "",
     price: 0,
+    photo: "",
   });
 
   useEffect(() => {
     const fetchData = async () => {
+      if (id == undefined) return;
       setMentor(await ITmentorAPI.GetMentorById(id));
       setInterval(function () {
         setIsLoading(false);
       }, 150);
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
     <>

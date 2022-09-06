@@ -1,5 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Card,
+  Button,
+  Spinner,
+} from "react-bootstrap";
 import { useObserver } from "../../../utils/hooks/useObserver";
 import classes from "./MentorCategoriesPage.module.css";
 import Link from "next/link";
@@ -15,7 +23,7 @@ const MentorCategoriesPage = ({ categories }) => {
   const [mentorsCount, setMentorsCount] = useState(0);
   const lastElement = useRef();
 
-  const [fetchData, isMentorLoading, postError] = useFetching(
+  const [fetchData, isMentorLoading, mentorError] = useFetching(
     async (limit, page, mentors) => {
       setMentorsCount(await ITmentorAPI.GetMentorsCount(categoryId));
       const new_mentors = await ITmentorAPI.GetMentorsByCategory(
@@ -94,7 +102,6 @@ const MentorCategoriesPage = ({ categories }) => {
           </Col>
           <Col lg={10} md={10} sm={8}>
             <Row>
-              {isMentorLoading}
               {mentors != undefined && mentors.length != 0 ? (
                 mentors.map((item) => {
                   return (
@@ -128,6 +135,15 @@ const MentorCategoriesPage = ({ categories }) => {
               ) : (
                 <Row className="text-center">
                   <h3>На жаль, для даної категорії менторів немає :(</h3>
+                </Row>
+              )}
+              {isMentorLoading && (
+                <Row className="d-flex justify-content-center">
+                  <Spinner
+                    animation="border"
+                    variant="primary"
+                    className={classes.spinner}
+                  />
                 </Row>
               )}
             </Row>

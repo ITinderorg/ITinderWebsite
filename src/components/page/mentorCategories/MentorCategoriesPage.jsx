@@ -111,7 +111,7 @@ const MentorCategoriesPage = ({ categories }) => {
           </Col>
         </Row>
         <Row>
-          <Col lg={2} md={2} sm={4}>
+          <Col lg={2} md={2} sm={4} className="pb-5">
             <h4>Категорії</h4>
             <div className={classes.categories_wrapper}>
               {categories.map((item) => {

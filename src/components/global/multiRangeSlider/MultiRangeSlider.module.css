@@ -6,7 +6,7 @@
 
 .slider {
   position: relative;
-  width: 140px;
+  width: 340px;
 }
 
 .slider__track,
@@ -59,7 +59,7 @@
   pointer-events: none;
   position: absolute;
   height: 0;
-  width: 140px;
+  width: 340px;
   outline: none;
 }
 
@@ -101,4 +101,54 @@
   margin-top: 4px;
   pointer-events: all;
   position: relative;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .thumb {
+    width: 100px;
+  }
+  .slider {
+    width: 100px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .thumb {
+    width: 100px;
+  }
+  .slider {
+    width: 100px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .thumb {
+    width: 140px;
+  }
+  .slider {
+    width: 140px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .thumb {
+    width: 150px;
+  }
+  .slider {
+    width: 150px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .thumb {
+    width: 150px;
+  }
+  .slider {
+    width: 150px;
+  }
 }

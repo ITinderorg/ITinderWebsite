@@ -17,7 +17,6 @@ export default class ITmentorAPI {
     pageSize = 9,
     pageNumber = 1
   ) {
-    console.log(`page: ${pageNumber}`);
     let res;
     if (categoryid == 0) {
       res = await this.GetMentors(pageSize, pageNumber);
@@ -32,7 +31,6 @@ export default class ITmentorAPI {
           "&pageSize=" +
           pageSize
       );
-      console.log(res.data);
       return res.data;
     }
   }
@@ -60,7 +58,6 @@ export default class ITmentorAPI {
         "/mentor/getMentorsCount?categoryId=" +
         categoryid
     );
-    console.log(`mentors count: ${res.data}`);
     return res.data;
   }
   static async SendMentorForm(form) {

@@ -10,14 +10,13 @@ const MentorCategoriesPage = ({ categories }) => {
   const [searchText, setSearchText] = useState("");
   const [mentors, setMentors] = useState([]);
   const [categoryId, setCategoryId] = useState(0);
-  const [limit, setLimit] = useState(9);
+  const [limit, setLimit] = useState(6);
   const [page, setPage] = useState(1);
   const [mentorsCount, setMentorsCount] = useState(0);
-  const [test, settest] = useState(false);
   const lastElement = useRef();
 
   const [fetchData, isMentorLoading, postError] = useFetching(
-    async (limit, page) => {
+    async (limit, page, mentors) => {
       setMentorsCount(await ITmentorAPI.GetMentorsCount(categoryId));
       const new_mentors = await ITmentorAPI.GetMentorsByCategory(
         categoryId,
@@ -28,11 +27,8 @@ const MentorCategoriesPage = ({ categories }) => {
     }
   );
 
-  const showFilteredMentors = async (categoryId) => {
-    console.log("click");
+  const showFilteredMentors = (categoryId) => {
     setCategoryId(categoryId);
-    setMentors([]);
-    setPage(1);
   };
 
   useObserver(
@@ -44,10 +40,14 @@ const MentorCategoriesPage = ({ categories }) => {
     }
   );
 
-  useEffect(() => {}, [categoryId]);
+  useEffect(() => {
+    if (page == 1) fetchData(limit, page, []);
+    else setPage(1);
+  }, [categoryId]);
 
   useEffect(() => {
-    fetchData(limit, page);
+    if (page == 1) fetchData(limit, page, []);
+    else fetchData(limit, page, mentors);
   }, [page, limit]);
 
   return (
@@ -132,8 +132,8 @@ const MentorCategoriesPage = ({ categories }) => {
               )}
             </Row>
           </Col>
-          <div ref={lastElement} />
         </Row>
+        <div ref={lastElement} />
       </Container>
     </section>
   );

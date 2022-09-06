@@ -13,6 +13,7 @@ import classes from "./MentorCategoriesPage.module.css";
 import Link from "next/link";
 import ITmentorAPI from "../../../utils/apis/ITmentorAPI";
 import { useFetching } from "../../../utils/hooks/useFetching";
+import MultiRangeSlider from "../../global/multiRangeSlider/MultiRangeSlider";
 
 const MentorCategoriesPage = ({ categories }) => {
   const [searchText, setSearchText] = useState("");
@@ -50,6 +51,14 @@ const MentorCategoriesPage = ({ categories }) => {
 
     setShownMentors(newShownMentors);
     setSearchText(name);
+  };
+
+  const filterMentorsByPrice = ({ min, max }) => {
+    let newShownMentors = mentors.filter(
+      (mentor) => mentor.price > min && mentor.price < max
+    );
+
+    setShownMentors(newShownMentors);
   };
 
   useObserver(
@@ -116,6 +125,14 @@ const MentorCategoriesPage = ({ categories }) => {
                   </a>
                 );
               })}
+            </div>
+            <h4>Ціна</h4>
+            <div className="d-flex">
+              <MultiRangeSlider
+                onChange={filterMentorsByPrice}
+                min={1}
+                max={1000}
+              />
             </div>
           </Col>
           <Col lg={10} md={10} sm={8}>

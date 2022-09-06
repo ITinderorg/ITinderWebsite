@@ -1,7 +1,7 @@
 const APIConfigs = {
   ITmentor: {
     endpoint:
-      "https://540c-2a02-a310-823a-8c80-34a5-e3ab-fe44-f1da.eu.ngrok.io",
+      "https://2c02-2a02-a310-823a-8c80-4d38-3f89-1d0d-caa0.eu.ngrok.io",
   },
 };
 

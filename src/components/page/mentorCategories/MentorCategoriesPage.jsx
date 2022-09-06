@@ -17,6 +17,7 @@ import { useFetching } from "../../../utils/hooks/useFetching";
 const MentorCategoriesPage = ({ categories }) => {
   const [searchText, setSearchText] = useState("");
   const [mentors, setMentors] = useState([]);
+  const [shownMentors, setShownMentors] = useState([]);
   const [categoryId, setCategoryId] = useState(0);
   const [limit, setLimit] = useState(6);
   const [page, setPage] = useState(1);
@@ -39,6 +40,18 @@ const MentorCategoriesPage = ({ categories }) => {
     setCategoryId(categoryId);
   };
 
+  const filterMentrosByText = (e) => {
+    let name = e.target.value;
+    if (name == "") setShownMentors(mentors);
+
+    let newShownMentors = mentors.filter((mentor) =>
+      mentor.name.includes(name)
+    );
+
+    setShownMentors(newShownMentors);
+    setSearchText(name);
+  };
+
   useObserver(
     lastElement,
     mentors.length < mentorsCount,
@@ -58,6 +71,10 @@ const MentorCategoriesPage = ({ categories }) => {
     else fetchData(limit, page, mentors);
   }, [page, limit]);
 
+  useEffect(() => {
+    setShownMentors(mentors);
+  }, [mentors]);
+
   return (
     <section
       className="section"
@@ -76,7 +93,8 @@ const MentorCategoriesPage = ({ categories }) => {
           <Col lg={10} md={12} sm={12} className="offset-lg-2">
             <Form.Group className="mb-3" controlId="text">
               <Form.Control
-                //value={searchText}
+                value={searchText}
+                onChange={filterMentrosByText}
                 type="text"
                 placeholder="Пошук"
               />
@@ -102,8 +120,8 @@ const MentorCategoriesPage = ({ categories }) => {
           </Col>
           <Col lg={10} md={10} sm={8}>
             <Row>
-              {mentors != undefined && mentors.length != 0 ? (
-                mentors.map((item) => {
+              {shownMentors != undefined && shownMentors.length != 0 ? (
+                shownMentors.map((item) => {
                   return (
                     <Col lg={4} md={6} sm={12} key={item.id} className="pb-3">
                       <Card style={{ height: 610 }}>
@@ -134,7 +152,7 @@ const MentorCategoriesPage = ({ categories }) => {
                 })
               ) : (
                 <Row className="text-center">
-                  <h3>На жаль, для даної категорії менторів немає :(</h3>
+                  <h3>На жаль, для цих фільтрів менторів немає :(</h3>
                 </Row>
               )}
               {isMentorLoading && (

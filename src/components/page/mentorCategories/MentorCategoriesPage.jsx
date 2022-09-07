@@ -141,9 +141,9 @@ const MentorCategoriesPage = ({ categories }) => {
                 shownMentors.map((item) => {
                   return (
                     <Col lg={4} md={6} sm={12} key={item.id} className="pb-3">
-                      <Card style={{ height: 610 }}>
+                      <Card style={{ maxWidth: 285 }}>
                         <Card.Img
-                          ariant="top"
+                          height={320}
                           src={`data:image/jpeg;base64,${item.photo}`}
                         />
                         <Card.Body>
@@ -159,7 +159,7 @@ const MentorCategoriesPage = ({ categories }) => {
                               {item.price} $
                             </Card.Text>
                             <Link href={"/ITmentor/mentors/" + item.id}>
-                              <Button variant="primary">Побачити більше</Button>
+                              <Button variant="primary">Глянути ментора</Button>
                             </Link>
                           </div>
                         </Card.Body>

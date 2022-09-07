@@ -1,30 +1,7 @@
 import classes from "./MentorDetailsPage.module.css";
-import { Container, Row, Col, Button, Modal } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useState } from "react";
-
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
-      <Modal.Body>
-        <h4>Підтвердь дію</h4>
-        <br />
-        <p>
-          Ти точно хочеш займатися з ментором{" "}
-          <strong>{props.mentor.name}</strong> за{" "}
-          <strong>{props.mentor.price}$</strong> за годину?
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={props.onHide}>
-          Закрити
-        </Button>
-        <Button variant="success" onClick={props.onConfirm}>
-          Оплатити
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
+import Modal from "../../global/modal/Modal";
 
 const MentorDetailsPage = ({ mentor }) => {
   const [modalShow, setModalShow] = useState(false);
@@ -83,7 +60,7 @@ const MentorDetailsPage = ({ mentor }) => {
         </Row>
       </Container>
 
-      <MyVerticallyCenteredModal
+      <Modal
         show={modalShow}
         onHide={() => setModalShow(false)}
         mentor={mentor}

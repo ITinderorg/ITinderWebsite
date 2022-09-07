@@ -47,7 +47,7 @@ export default class ITmentorAPI {
   }
   static async GetMentorById(id) {
     let res = await axios.get(
-      APIConfigs.ITmentor.endpoint + "/mentor/getMentorById?id=" + id
+      APIConfigs.ITmentor.endpoint + "/mentor/getMentorById?base64Id=" + id
     );
 
     return res.data;

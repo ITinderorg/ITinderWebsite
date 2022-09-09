@@ -1,11 +1,10 @@
 import classes from "./MentorDetailsPage.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useState } from "react";
-import Modal from "../../global/modal/Modal";
+import APIConfigs from "../../../constants/APIConfigs";
+import Utils from "../../../utils/Utils";
+import LiqPay from "../../global/liqpay/LiqPay";
 
 const MentorDetailsPage = ({ mentor }) => {
-  const [modalShow, setModalShow] = useState(false);
-
   return (
     <section className="section" id="mentorDetails">
       <Container>
@@ -20,6 +19,7 @@ const MentorDetailsPage = ({ mentor }) => {
           <img
             src={`data:image/jpeg;base64,${mentor.photo}`}
             className={classes.image}
+            alt={mentor.name}
           />
           <Col lg={5} md={5} sm={7}>
             <h2>{mentor.name}</h2>
@@ -38,9 +38,17 @@ const MentorDetailsPage = ({ mentor }) => {
               <h4>Замов сессію зараз</h4>
             </Row>
             <Row>
-              <Button variant="primary" onClick={() => setModalShow(true)}>
-                Почати вчитись
-              </Button>
+              <LiqPay
+                title="Оплатити"
+                amount={mentor.price}
+                description={`Payment for mentor ${mentor.name}`}
+                currency="USD"
+                orderId={Math.floor(1 + Math.random() * 900000000)}
+                result_url="http://domain.com/user/account"
+                server_url="http://server.domain.com/liqpay"
+                product_description="Online courses"
+                style={{ margin: "8px" }}
+              />
             </Row>
           </Col>
         </Row>
@@ -59,13 +67,6 @@ const MentorDetailsPage = ({ mentor }) => {
           </Col>
         </Row>
       </Container>
-
-      <Modal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        mentor={mentor}
-        size="md"
-      />
     </section>
   );
 };

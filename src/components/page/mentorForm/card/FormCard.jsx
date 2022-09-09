@@ -7,6 +7,7 @@ import GearImg from "../../../../assets/images/gear.png";
 import RocketImg from "../../../../assets/images/Rocket.png";
 import ITmentorAPI from "../../../../utils/apis/ITmentorAPI";
 import { useTransition, animated } from "react-spring";
+import ImageHelper from "../../../../utils/helpers/ImageHelper";
 
 const FormCard = () => {
   const name = useInput("", { minLength: 3, isEmpty: false });
@@ -52,14 +53,19 @@ const FormCard = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    let form = new FormData();
-    form.append("Name", name.value);
-    form.append("Skills", skills.value);
-    form.append("Position", position.value);
-    form.append("Description", description.value);
-    form.append("Price", price.value);
-    form.append("Email", email.value);
-    form.append("Photo", photo);
+    const form = {
+      Name: name.value,
+      Skills: skills.value,
+      Position: position.value,
+      Description: description.value,
+      Price: price.value,
+      Email: email.value,
+      LinkedIn: linkedin.value,
+      TelegramId: telegramid.value,
+      Photo: photo,
+      CategoryId: 1,
+    };
+
     await ITmentorAPI.SendMentorForm(form);
 
     setRocket(true);
@@ -69,7 +75,12 @@ const FormCard = () => {
   };
 
   const onPhotoChange = (e) => {
-    setPhoto(e.target.files[0]);
+    let photo = e.target.files[0];
+    if (photo == undefined) return;
+
+    ImageHelper.GetByteArray(photo, (res) => {
+      setPhoto(res);
+    });
   };
 
   const [isRocket, setRocket] = useState(false);
@@ -201,7 +212,7 @@ const FormCard = () => {
                   type="number"
                   placeholder="Напиши ціну за годину твого часу"
                   min="1"
-                  max="20000"
+                  max="1000"
                   step="1"
                   required
                 />

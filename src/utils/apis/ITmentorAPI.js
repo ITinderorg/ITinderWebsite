@@ -61,6 +61,10 @@ export default class ITmentorAPI {
     return res.data;
   }
   static async SendMentorForm(form) {
-    return null; // TODO
+    console.log(form);
+    await axios.post(
+      APIConfigs.ITmentor.endpoint + "/mentor/addMentorForm",
+      form
+    );
   }
 }

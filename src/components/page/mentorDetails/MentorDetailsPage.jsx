@@ -1,8 +1,7 @@
 import classes from "./MentorDetailsPage.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import APIConfigs from "../../../constants/APIConfigs";
-import Utils from "../../../utils/Utils";
 import LiqPay from "../../global/liqpay/LiqPay";
+import LiqPayAPI from "../../../utils/apis/LiqPayAPI";
 
 const MentorDetailsPage = ({ mentor }) => {
   return (
@@ -64,6 +63,7 @@ const MentorDetailsPage = ({ mentor }) => {
                 ? "Відгуків про цього ментора поки немає"
                 : mentor.comments}
             </p>
+            <Button onClick={() => LiqPayAPI.Test(1)}> TEST </Button>
           </Col>
         </Row>
       </Container>

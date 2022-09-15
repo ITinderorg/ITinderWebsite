@@ -1,7 +1,7 @@
 const APIConfigs = {
   ITmentor: {
     endpoint:
-      "https://8378-2a02-a310-823a-8c80-e4ea-8346-e677-854b.eu.ngrok.io",
+      "https://f160-2a02-a310-823a-8c80-b926-61b5-a421-da99.eu.ngrok.io",
   },
   LiqPay: {
     publicKey: "sandbox_i30542783909",

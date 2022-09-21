@@ -2,6 +2,11 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Deployed
+
+- prod https://itinder.com.ua
+- dev https://proud-sea-0a8eeb103.1.azurestaticapps.net
+
 ## Table of contents
 
 - [Getting started](#getting-started)

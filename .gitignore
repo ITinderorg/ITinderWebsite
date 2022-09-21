@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+.idea/.idea.ITinderWebsite.dir/.idea/indexLayout.xml
+.idea/.idea.ITinderWebsite.dir/.idea/vcs.xml
+.idea/.idea.ITinderWebsite.dir/.idea/workspace.xml

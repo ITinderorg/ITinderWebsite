@@ -2,6 +2,11 @@
   "name": "site",
   "version": "0.1.0",
   "private": true,
+  "os": [
+    "win32",
+    "linux"
+  ],
+  "arch": "x64",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
 import PartnersPage from "../components/page/partners/PartnersPage";
 
-export default function Home() {
+export default function ITpartners() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },

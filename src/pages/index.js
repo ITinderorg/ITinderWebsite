@@ -6,7 +6,7 @@ import { useTransition, animated } from "react-spring";
 import Header from "../components/global/header/Header";
 import Footer from "../components/global/footer/Footer";
 
-export default function Home() {
+export default function Index() {
   const [data, setData] = useState({
     stats: {
       candidates: 0,

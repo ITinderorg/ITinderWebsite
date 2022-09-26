@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Header from "../components/global/header/Header";
-import Loader from "../components/global/loader/Loader";
-import Footer from "../components/global/footer/Footer";
+import Header from "../../components/global/header/Header";
+import Loader from "../../components/global/loader/Loader";
+import Footer from "../../components/global/footer/Footer";
 import { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
-import PartnersPage from "../components/page/partners/PartnersPage";
+import PartnersPage from "../../components/page/partners/PartnersPage";
 
-export default function ITpartners() {
+export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const transition = useTransition(isLoading, {
     from: { opacity: 1 },
@@ -38,7 +38,7 @@ export default function ITpartners() {
           content="ITpartners - Запрошуємо бізнес до партнерства — тисячі IT спеціалістів чекають на ваші пропозиції🙌"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="/ITpartners" />
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
           rel="stylesheet"

@@ -11,7 +11,7 @@ const nextConfig = {
       "/ITpartners": { page: "/ITpartners" },
     };
   },
-  i18n: {
+  /*i18n: {
     locales: ["ua"],
     defaultLocale: "ua",
     domains: [
@@ -21,7 +21,7 @@ const nextConfig = {
         http: true,
       },
     ],
-  },
+  },*/
 };
 
 module.exports = nextConfig;

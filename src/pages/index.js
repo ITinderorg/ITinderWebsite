@@ -41,23 +41,17 @@ export default function Index() {
     <>
       <Head>
         <title>ITinder</title>
-        <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="author" content="" />
         <meta
           name="description"
           content="Перший Український бот для пошуку роботи в IT!
           Ти рекрутер і в пошуку IT - шників? Заповнюй вакансію, отримай матч від кандидата, чекай на CV!"
         />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
-          rel="stylesheet"
-        />
+        <link rel="alternate" href="/" hrefLang="ua" />
       </Head>
 
       {transition((style, item) =>

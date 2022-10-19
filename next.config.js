@@ -11,6 +11,17 @@ const nextConfig = {
       "/ITpartners": { page: "/ITpartners" },
     };
   },
+  i18n: {
+    locales: ["ua"],
+    defaultLocale: "ua",
+    domains: [
+      {
+        domain: "itinder.com.ua",
+        defaultLocale: "en-US",
+        http: true,
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

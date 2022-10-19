@@ -33,10 +33,64 @@ font & reset css
 reset
 --------------------------------------------- 
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -64,13 +118,20 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
-ul, li {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-header, nav, section, article, aside, footer, hgroup {
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
   display: block;
 }
 
@@ -78,7 +139,8 @@ header, nav, section, article, aside, footer, hgroup {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Raleway", sans-serif !important;
   font-weight: 400;
   background-color: #fff;
@@ -92,7 +154,12 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -123,9 +190,9 @@ body {
 }*/
 
 @media all and (min-width: 1400px) {
-.container {
-  max-width: 1140px !important;
-}
+  .container {
+    max-width: 1140px !important;
+  }
 }
 
 .section {
@@ -214,7 +281,7 @@ body {
 }
 
 .left-text p.dark {
-  color: #3B566E;
+  color: #3b566e;
 }
 
 .padding-bottom-top-60 {
@@ -301,7 +368,8 @@ body {
 }
 
 @media (max-width: 991px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
   .mobile-top-fix {
@@ -320,7 +388,7 @@ a.main-button-slider {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #FFFF2E;
+  background-color: #ffff2e;
   text-transform: uppercase;
   color: #000000;
   letter-spacing: 0.25px;
@@ -373,7 +441,6 @@ button.main-button:hover {
   background-color: #ff589e;
 }
 
-
 /* 
 ---------------------------------------------
 header
@@ -393,7 +460,7 @@ header
 }
 
 .header-area .main-nav {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 40px;
   min-height: 80px;
   background: #fff;
@@ -477,7 +544,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #3B566E;
+  background-color: #3b566e;
   display: block;
   position: absolute;
   width: 30px;
@@ -491,7 +558,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #3B566E;
+  background-color: #3b566e;
   display: block;
   position: absolute;
   width: 30px;
@@ -538,7 +605,7 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #3B566E;
+  background-color: #3b566e;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -546,7 +613,7 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #3B566E;
+  background-color: #3b566e;
 }
 
 .header-area.header-sticky {
@@ -626,7 +693,7 @@ header
     padding: 0px !important;
     border: none !important;
     background: #fff !important;
-    color: #3B566E !important;
+    color: #3b566e !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -653,7 +720,7 @@ welcome
   background-image: url(../images/banner-bg-min.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; 
+  background-size: cover;
   height: 100vh;
 }
 
@@ -710,7 +777,7 @@ welcome
     top: 65% !important;
     transform: perspective(1px) translateY(-60%) !important;
   }
-   .welcome-area .header-text h1 {
+  .welcome-area .header-text h1 {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 15px;
@@ -750,7 +817,6 @@ welcome
   }
 }
 
-
 /* 
 ---------------------------------------------
 features
@@ -759,8 +825,8 @@ features
 .features-small-item {
   cursor: pointer;
   display: block;
-  background: #FFFFFF;
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+  background: #ffffff;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -854,11 +920,11 @@ parallax & home seperator
 }
 
 .mini:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 140%;
   height: 140%;
-  opacity: .95;
+  opacity: 0.95;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -953,12 +1019,12 @@ parallax & home seperator
 }
 
 .mini .mini-content .mini-box-completed:before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   background: #fff;
   width: 100%;
-  opacity: .15;
+  opacity: 0.15;
   height: 100%;
   bottom: -10px;
   left: 0px;
@@ -978,7 +1044,7 @@ parallax & home seperator
   font-weight: 400;
   font-size: 14px;
   color: #777;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
 }
 
 .mini .mini-content .mini-box-completed strong {
@@ -996,12 +1062,12 @@ parallax & home seperator
 }
 
 .mini .mini-content .mini-box:before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   background: #fff;
   width: 100%;
-  opacity: .15;
+  opacity: 0.15;
   height: 100%;
   bottom: -10px;
   left: 0px;
@@ -1021,7 +1087,7 @@ parallax & home seperator
   font-weight: 400;
   font-size: 14px;
   color: #777;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
 }
 
 .mini .mini-content .mini-box strong {
@@ -1040,11 +1106,11 @@ parallax & home seperator
 }
 
 .counter:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 140%;
   height: 140%;
-  opacity: .90;
+  opacity: 0.9;
   background-image: url(../images/workprocess-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1141,7 +1207,7 @@ team
 */
 .team-item {
   background: #fff;
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   position: relative;
   margin-bottom: 30px;
@@ -1157,7 +1223,7 @@ team
   margin-left: 25px;
   margin-top: 25px;
   font-size: 30px;
-  color: #4E47DE;
+  color: #4e47de;
   text-align: center;
 }
 
@@ -1226,7 +1292,7 @@ pricing
 --------------------------------------------- 
 */
 .pricing-item {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-bottom: 30px;
@@ -1408,7 +1474,7 @@ blog
   padding-left: 30px;
 }
 
-.blog-post-thumb a.main-button  {
+.blog-post-thumb a.main-button {
   margin-top: 10px;
   display: inline-block;
 }
@@ -1416,7 +1482,6 @@ blog
 .blog-list .blog-post-thumb {
   text-align: left;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1439,7 +1504,7 @@ contact
 .contact-text {
   font-weight: 400;
   font-size: 14px;
-  color: #6F8BA4;
+  color: #6f8ba4;
   letter-spacing: 0.6px;
   line-height: 26px;
 }
@@ -1510,13 +1575,13 @@ footer .social li a {
 }
 
 footer .social li a:hover {
-  background-color: #FFFF00;
+  background-color: #ffff00;
   color: #0b8cfc;
 }
 
 footer .copyright {
   text-align: center;
-  border-top: 1px solid rgba(250,250,250,0.2);
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
   margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 30px;

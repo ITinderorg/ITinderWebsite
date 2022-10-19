@@ -27,26 +27,16 @@ export default function Index() {
     <>
       <Head>
         <title>ITpartner</title>
-        <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="author" content="" />
         <meta
           name="description"
           content="ITpartners - Запрошуємо бізнес до партнерства — тисячі IT спеціалістів чекають на ваші пропозиції🙌"
         />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="/ITpartners" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-        ></link>
+        <link rel="alternate" href="/ITpartners" hrefLang="ua" />
       </Head>
 
       {transition((style, item) =>

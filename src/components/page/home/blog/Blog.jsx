@@ -2,6 +2,8 @@ import "./Blog.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import KateImg from "../../../../assets/images/kaaaaate.jpg";
 import AndryImg from "../../../../assets/images/andyyy.jpg";
+import VladImg from "../../../../assets/images/vlad.jpg";
+import YuriiImg from "../../../../assets/images/yurii.jpg";
 
 const Blog = () => {
   const people = [
@@ -16,6 +18,18 @@ const Blog = () => {
       description: "Founder & CEO ITinder, .NET Software Engineer",
       linkedInHref: "https://www.linkedin.com/in/andrii-borysenko-68a8a518a/",
       imageSrc: AndryImg.src,
+    },
+    {
+      name: "Vladyslav Dubovyi",
+      description: "Fullstack .NET Engineer",
+      linkedInHref: "https://www.linkedin.com/in/vladyslav-dubovyi/",
+      imageSrc: VladImg.src,
+    },
+    {
+      name: "Yurii Voskoboinyk",
+      description: "Marketing Team Lead",
+      linkedInHref: "https://www.linkedin.com/in/yurii-voskoboinyk/",
+      imageSrc: YuriiImg.src,
     },
   ];
 
@@ -37,7 +51,7 @@ const Blog = () => {
         <Row className="justify-content-center">
           {people.map((item) => {
             return (
-              <Col lg={4} md={6} sm={12} key={item.name}>
+              <Col lg={6} md={6} sm={12} key={item.name}>
                 <div className="blog-post-thumb">
                   <div className="img">
                     <img

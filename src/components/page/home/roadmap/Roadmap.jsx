@@ -1,4 +1,4 @@
-import "./Roadmap.module.css";
+import classes from "./Roadmap.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Constants from "../../../../constants/HomeConstants";
 
@@ -19,28 +19,29 @@ const Roadmap = () => {
               </div>
             </Col>
           </Row>
-
-          <Row>
-            {goals.map((item) => {
-              return (
-                <Col lg={2} md={3} sm={6} xs={6} key={item.month}>
-                  <a
-                    className={
-                      item.complete ? "mini-box-completed" : "mini-box"
-                    }
-                  >
-                    <strong>{item.month}</strong>
-                    {item.points.map((point) => {
-                      return point == "<br />" ? (
-                        <br key={point} />
-                      ) : (
-                        <span key={point}>{point}</span>
-                      );
-                    })}
-                  </a>
-                </Col>
-              );
-            })}
+          <Row className={classes.timeline_container}>
+            <div className={classes.timeline}>
+              <div className={classes.container}>
+                {goals.map((item) => {
+                  return (
+                    <div
+                      className={
+                        classes.goal +
+                        " " +
+                        (item.id % 2 == 0
+                          ? classes.goal_odd
+                          : classes.goal_even) +
+                        " " +
+                        (item.completed ? classes.completed : "")
+                      }
+                      data-year={item.year}
+                      data-text={item.text}
+                      key={item.id}
+                    ></div>
+                  );
+                })}
+              </div>
+            </div>
           </Row>
         </Container>
       </div>

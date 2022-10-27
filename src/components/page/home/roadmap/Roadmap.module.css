@@ -1,0 +1,128 @@
+.timeline_container {
+  height: 100px;
+}
+
+.timeline {
+  width: 80%;
+  height: 20px;
+  list-style: none;
+  text-align: justify;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 45%,
+    rgb(255, 234, 0) 51%,
+    rgba(255, 255, 255, 0) 57%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.timeline:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+
+.goal {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #f2bb13;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  border-radius: 50%;
+}
+
+.goal:before {
+  color: white;
+  display: inline-block;
+  content: attr(data-year);
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.goal_odd:before {
+  top: -40px;
+}
+.goal_even:before {
+  bottom: -40px;
+}
+
+.goal:after {
+  color: white;
+  display: inline-block;
+  content: attr(data-text);
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.goal_odd:after {
+  bottom: 0;
+  margin-bottom: -10px;
+  transform: translate(-50%, 100%);
+}
+.goal_even:after {
+  top: 0;
+  margin-top: -10px;
+  transform: translate(-50%, -100%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.completed {
+  background: #0cd745;
+}
+
+@media (max-width: 756px) {
+  .timeline_container {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  .timeline {
+    width: 0px;
+    height: 450px;
+    text-align: center;
+    border-right: 4px solid rgb(255, 234, 0);
+    background: none;
+    top: 70%;
+    padding: 0;
+  }
+  .container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .goal {
+    margin-left: -8px;
+  }
+
+  .goal_odd:before {
+    transform: translate(-120%, 100%);
+  }
+  .goal_even:before {
+    transform: translate(20%, -100%);
+  }
+
+  .goal_odd:after {
+    width: 250px;
+    transform: translate(-10%, 0%);
+  }
+  .goal_even:after {
+    width: 250px;
+    transform: translate(-90%, 50%);
+  }
+}

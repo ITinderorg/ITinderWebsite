@@ -35,10 +35,7 @@ const OurPartners = () => {
                         <img
                           width="140"
                           height="160"
-                          src={
-                            require("../../../../assets/images/" +
-                              item.imageName).default.src
-                          }
+                          src={item.imageSrc}
                           alt="telegram"
                           title="telegram"
                           loading="lazy"

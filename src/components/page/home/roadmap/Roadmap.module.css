@@ -1,0 +1,13 @@
+.image_phone {
+  display: none;
+}
+
+@media (max-width: 756px) {
+  .image {
+    display: none;
+  }
+  .image_phone {
+    display: initial;
+    height: 700px;
+  }
+}

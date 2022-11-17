@@ -34,6 +34,15 @@ export default function Index() {
           },
         });
         setIsLoading(false);
+      })
+      .catch((err) => {
+        setData({
+          stats: {
+            candidates: 0,
+            recruiters: 0,
+          },
+        });
+        setIsLoading(false);
       });
   }, []);
 

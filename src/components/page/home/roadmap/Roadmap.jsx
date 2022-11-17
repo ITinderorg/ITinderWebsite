@@ -1,6 +1,8 @@
 import classes from "./Roadmap.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Constants from "../../../../constants/HomeConstants";
+import RoadmapPhoneImg from "../../../../assets/images/roadmap_phone1.svg";
+import RoadmapImg from "../../../../assets/images/roadmap.svg";
 
 const Roadmap = () => {
   const goals = Constants.Goals;
@@ -19,29 +21,9 @@ const Roadmap = () => {
               </div>
             </Col>
           </Row>
-          <Row className={classes.timeline_container}>
-            <div className={classes.timeline}>
-              <div className={classes.container}>
-                {goals.map((item) => {
-                  return (
-                    <div
-                      className={
-                        classes.goal +
-                        " " +
-                        (item.id % 2 == 0
-                          ? classes.goal_odd
-                          : classes.goal_even) +
-                        " " +
-                        (item.completed ? classes.completed : "")
-                      }
-                      data-year={item.year}
-                      data-text={item.text}
-                      key={item.id}
-                    ></div>
-                  );
-                })}
-              </div>
-            </div>
+          <Row>
+            <img className={classes.image} src={RoadmapImg.src} />
+            <img className={classes.image_phone} src={RoadmapPhoneImg.src} />
           </Row>
         </Container>
       </div>

@@ -31,4 +31,4 @@ jobs:
           app-name: 'itinder'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_96421437BF9E48F98624918E6E98080D }}
-          package: .  
+          package: ./build

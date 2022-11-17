@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("https://itinder.azurewebsites.net/itinder/getstat")
+    fetch("https://itinder-api.azurewebsites.net/itinder/getstat")
       .then((res) => res.json())
       .then((data) => {
         setData({
